@@ -3,36 +3,41 @@ import React from 'react';
 const HireTalent = () => {
   return (
     <section className="py-24 bg-white">
-      <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
-        <div className="flex-1 relative h-[400px] flex justify-center order-2 md:order-1">
-          {/* Overlapping Cards Visual */}
-          <div className="relative w-80 h-full">
-            {/* Background cards */}
-            <div className="absolute top-5 left-0 w-56 bg-white rounded-3xl p-4 shadow-xl border border-gray-50 transform -rotate-6">
-               <img src="/Assests/image 1.png" className="w-full rounded-2xl" alt="Card 1" />
-            </div>
-            <div className="absolute top-24 right-0 w-56 bg-white rounded-3xl p-4 shadow-2xl border border-gray-50 z-10 transform rotate-3">
-               <img src="/Assests/image 2.png" className="w-full rounded-2xl" alt="Card 2" />
-            </div>
-            {/* Frontmost card with profile */}
-            <div className="absolute top-44 left-10 w-56 bg-white rounded-3xl p-4 shadow-2xl border border-gray-50 z-20">
-               <img src="/Assests/pikwly59 1.png" className="w-full rounded-2xl" alt="Card 3" />
-            </div>
-            {/* Checkmark Badge */}
-            <div className="absolute top-64 -right-5 w-16 h-16 bg-[#ff7301] rounded-full flex items-center justify-center z-30 border-4 border-white shadow-[0_10px_30px_rgba(255,115,1,0.4)]">
-               <span className="text-white text-3xl font-bold">✓</span>
-            </div>
+      <div className="flex flex-col md:flex-row items-center gap-20">
+        <div className="flex-1 relative flex justify-center order-2 md:order-1">
+          {/* Main Visual */}
+          <div className="relative w-full max-w-lg transition-transform hover:scale-105 duration-700">
+            <img 
+              src="/Assests/hiring.svg" 
+              className="w-full h-auto" 
+              alt="Hiring Illustration" 
+            />
           </div>
         </div>
 
         <div className="flex-1 text-left order-1 md:order-2">
-          <div className="inline-flex bg-gray-100 rounded-full p-1 mb-8">
-            <span className="bg-white px-6 py-2 rounded-full text-sm font-bold shadow-sm">HIRE TALENT</span>
-            <span className="px-6 py-2 rounded-full text-sm font-bold text-gray-500 bg-transparent">SHARE TALENT</span>
+          {/* Toggle Button */}
+          <div className="inline-flex bg-white rounded-full p-1 mb-10 border border-gray-100 shadow-xl shadow-gray-200/50">
+            <button className="bg-[#fbb03b] text-gray-900 px-8 py-3 rounded-full text-sm font-black tracking-wider uppercase transition-all shadow-lg shadow-orange-500/20">
+              HIRE TALENT
+            </button>
+            <button className="px-8 py-3 rounded-full text-sm font-black tracking-wider uppercase text-gray-500 hover:text-gray-900 transition-colors">
+              SHARE TALENT
+            </button>
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">Hire Talent Without<br />Notice Period</h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-10 max-w-[500px]">Access Immediate Joiners From A Pool Of Full-Time Employees Shared By 800+ IT Companies Like Yours To Hire Them On Project Basis</p>
-          <button className="bg-[#ff7301] text-white px-10 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity">Post Job</button>
+
+          <h2 className="text-6xl md:text-7xl font-serif font-bold text-gray-900 leading-[1.1] mb-8">
+            Hire Talent Without<br />
+            <span className="block">Notice Period</span>
+          </h2>
+          
+          <p className="text-lg text-gray-600 leading-relaxed mb-12 max-w-lg font-medium">
+            Access Immediate Joiners From A Pool Of Full-Time Employees Shared By 800+ IT Companies Like Yours To Hire Them On Project Basis
+          </p>
+
+          <button className="bg-[#ff7301] text-white px-12 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-orange-500/20">
+            Post Job
+          </button>
         </div>
       </div>
     </section>

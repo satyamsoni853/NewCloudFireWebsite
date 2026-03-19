@@ -1,15 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #ff7301;
+  --color-secondary: #101010;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  
+  --shadow-custom: 0 10px 40px rgba(0,0,0,0.1);
+  --radius-custom: 2.5rem;
+}
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
   body {
     @apply font-sans antialiased text-[#1f1f1f] bg-white m-0;
   }
 
   h1, h2, h3, h4 {
-    @apply font-serif font-bold text-[#101010];
+    @apply font-serif font-bold text-secondary;
   }
 }

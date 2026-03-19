@@ -25,9 +25,9 @@ function App() {
         <div className="max-w-[1400px] mx-auto px-6 space-y-20">
           <About />
           <HireTalent />
+          <CoreOfferings />
           <Interview />
           <Workflow />
-          <CoreOfferings />
           <CTABanner />
           <Industries />
           <Clients />
