@@ -2,19 +2,38 @@ import React from 'react';
 
 const CTABanner = () => {
   return (
-    <div className="bg-linear-to-br from-[#fbb03b] to-primary rounded-custom p-16 md:p-24 text-center text-gray-900 shadow-2xl shadow-orange-500/20 relative overflow-hidden group">
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('/Assests/arrow2.png')] bg-no-repeat bg-contain opacity-5 pointer-events-none group-hover:scale-105 transition-transform duration-1000"></div>
-      
-      <div className="relative z-10">
-        <h2 className="font-[Georgia,serif] font-bold text-[48px] md:text-[56px] mb-8 leading-tight">Ready To Get Started?</h2>
-        <p className="font-['Segoe_UI',sans-serif] font-normal text-[18px] md:text-[20px] max-w-2xl mx-auto mb-12 opacity-90 leading-relaxed">
-          Experience Our AI-Powered Talent Matching And Transform How You Build Your Tech Team.
-        </p>
-        <button className="bg-white text-gray-900 px-12 py-5 rounded-2xl font-['Segoe_UI',sans-serif] font-bold text-[18px] hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-4 mx-auto shadow-xl shadow-orange-900/10">
-          Schedule Your Consultation <span className="text-[10px]">▶</span>
-        </button>
+    <section className="bg-white py-20">
+      <div className="max-w-[1270px] mx-auto px-6">
+        <div className="max-w-[1400px] mx-auto px-6">
+        <div className="w-full max-w-[700px] h-auto min-h-[250px] mx-auto bg-gradient-to-r from-[#ff7301] to-[#ffaa00] rounded-[20px] flex items-center justify-between px-6 sm:px-10 py-10 md:py-0 lg:px-14 shadow-xl shadow-orange-500/20 relative overflow-hidden flex-col md:flex-row text-center md:text-left gap-8 md:gap-0">
+          
+          {/* Left Side Content */}
+          <div className="flex-1 relative z-10">
+            {/* Heading: Georgia, Bold, 28px */}
+            <h2 className="font-serif font-bold text-[28px] text-white mb-3 leading-tight">
+              Ready to Get Started?
+            </h2>
+            {/* Description: Segoe UI, 400, 18px, LH 26px */}
+            <p className="font-['Segoe_UI',sans-serif] font-normal text-[16px] sm:text-[18px] leading-[26px] text-white/90 max-w-sm mx-auto md:mx-0">
+              Experience our AI-powered talent matching and transform how you build your tech team.
+            </p>
+          </div>
+
+          {/* Right Side Button */}
+          <div className="relative z-10 shrink-0">
+            {/* Button: w-[277px] h-[40px], Segoe UI, 400, 16px, LH 12px */}
+            <button className="w-full sm:w-[277px] h-auto sm:h-[40px] py-3 sm:py-0 bg-white text-[#ff7301] rounded-lg font-['Segoe_UI',sans-serif] font-normal text-[16px] leading-[12px] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all text-center flex items-center justify-center">
+              Get Your Custom Proposal
+            </button>
+          </div>
+          
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl translate-y-1/3 -translate-x-1/4"></div>
+        </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 };
 

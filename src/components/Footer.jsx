@@ -2,24 +2,28 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="pt-20 pb-10 bg-[#f9f9f9] border-t border-gray-200 text-gray-700">
-      <div className="max-w-[1400px] mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+    <footer className="w-full bg-[#f6f6f6] border-t border-gray-200 flex justify-center text-left">
+      {/* Footer Container */}
+      <div className="w-full max-w-[1440px] h-auto pt-[60px] px-6 lg:px-[80px] pb-[30px] flex flex-col justify-between">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Brand Column */}
-          <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
-            <img src="/Assests/Cloudfire.png" className="h-24 w-auto object-contain" alt="Cloudfire" />
+          <div className="col-span-1 lg:col-span-4 flex flex-col items-center lg:items-start w-full lg:w-[248px]">
+            {/* Logo */}
+            <img src="/Assests/Cloudfire.png" className="w-[174px] h-[131px] object-contain mb-4" alt="Cloudfire" />
             
-            <div className="bg-[#fbb03b] p-6 rounded-2xl flex flex-col items-center gap-3 w-full max-w-[300px] shadow-[0_10px_30px_rgba(251,176,59,0.3)]">
-              <div className="bg-transparent mb-1">
-                <img src="/Assests/address.png" className="w-8 h-8" alt="address" />
-              </div>
-              <span className="text-[13px] font-bold text-gray-900 leading-tight">
+            {/* Orange Box */}
+            <div className="w-[248px] h-[116px] bg-linear-to-b from-[#ffaf38] to-[#ff7e06] rounded-[15px] flex flex-col items-center justify-center p-4 shadow-md mb-8">
+              <img src="/Assests/address.png" className="w-8 h-8 mb-2" alt="address" />
+              {/* Address Text */}
+              <span className="font-['Segoe_UI',sans-serif] font-semibold text-[15px] leading-[18px] text-gray-900 text-center">
                 Plot No.33, (225), Sohna,<br />
                 Gurugram, Haryana 122103
               </span>
             </div>
             
-            <div className="flex gap-6 pt-2">
+            {/* Social Icons */}
+            <div className="flex gap-6 justify-center">
               {[
                 { name: 'fb', icon: 'fb.png' },
                 { name: 'insta', icon: 'insta.png' },
@@ -27,30 +31,36 @@ const Footer = () => {
                 { name: 'in', icon: 'linkedin.png' }
               ].map((social) => (
                 <a href="#" key={social.name} className="hover:scale-110 transition-transform">
-                  <img src={`/Assests/${social.icon}`} className="w-6 h-6 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100" alt={social.name} />
+                  <img 
+                    src={`/Assests/${social.icon}`} 
+                    className="w-[22px] h-[22px] opacity-90 hover:opacity-100 transition-all" 
+                    style={{ filter: "invert(64%) sepia(85%) saturate(3025%) hue-rotate(345deg) brightness(101%) contrast(97%)" }} 
+                    alt={social.name} 
+                  />
                 </a>
               ))}
             </div>
           </div>
           
           {/* Links Columns */}
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-10 text-left">
+          <div className="col-span-1 lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 mt-8 lg:mt-0 text-center sm:text-left">
             <div>
-              <h4 className="text-gray-900 font-serif font-bold text-xl mb-10">E-Commerce</h4>
-              <ul className="space-y-4">
+              {/* Heading */}
+              <h4 className="text-gray-900 font-serif font-bold text-[16px] leading-[14px] mb-6">E-Commerce</h4>
+              <ul className="space-y-2 lg:space-y-0">
                 {['Big-Commerce', 'Magento', 'OScommerce', 'Prestashop', 'Shopify', 'Ubercart', 'Wpcommerce', 'Opencart', 'Woocommerce'].map(link => (
-                  <li key={link} className="hover:text-primary transition-colors cursor-pointer text-[15px] font-normal">{link}</li>
+                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[15px] lg:leading-[28px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer">{link}</li>
                 ))}
               </ul>
             </div>
             <div>
-              <h4 className="text-gray-900 font-serif font-bold text-xl mb-10">Company</h4>
-              <ul className="space-y-4">
-                <li className="text-primary font-bold cursor-pointer">Home</li>
+              <h4 className="text-gray-900 font-serif font-bold text-[16px] leading-[14px] mb-6">Company</h4>
+              <ul className="space-y-2 lg:space-y-0">
+                <li className="font-['Segoe_UI',sans-serif] font-bold text-[#ff7301] text-[15px] lg:leading-[28px] cursor-pointer">Home</li>
                 {['Our Tools', 'Services', 'Skills Network', 'Industries', 'AI Talent', 'Case Studies', 'Resources'].map(link => (
                   <li 
                     key={link} 
-                    className={`hover:text-primary transition-colors cursor-pointer text-[15px] font-normal ${link === 'Skills Network' ? 'italic' : ''}`}
+                    className={`font-['Segoe_UI',sans-serif] font-normal text-[15px] lg:leading-[28px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer ${link === 'Skills Network' ? 'italic' : ''}`}
                   >
                     {link}
                   </li>
@@ -58,18 +68,18 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-gray-900 font-serif font-bold text-xl mb-10">Services</h4>
-              <ul className="space-y-4">
+              <h4 className="text-gray-900 font-serif font-bold text-[16px] leading-[14px] mb-6">Services</h4>
+              <ul className="space-y-2 lg:space-y-0">
                 {['E-Learning', 'E-Commerce', 'Framework', 'CMS', 'Virtual Classroom'].map(link => (
-                  <li key={link} className="hover:text-primary transition-colors cursor-pointer text-[15px] font-normal">{link}</li>
+                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[15px] lg:leading-[28px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer">{link}</li>
                 ))}
               </ul>
             </div>
             <div>
-              <h4 className="text-gray-900 font-serif font-bold text-xl mb-10">E-Learning</h4>
-              <ul className="space-y-4">
+              <h4 className="text-gray-900 font-serif font-bold text-[16px] leading-[14px] mb-6">E-Learning</h4>
+              <ul className="space-y-2 lg:space-y-0">
                 {['Moodle', 'Joomoodle', 'WPLMS', 'Mahara', 'Learndash', 'Learnpress', 'Totara', 'Opigno'].map(link => (
-                  <li key={link} className="hover:text-primary transition-colors cursor-pointer text-[15px] font-normal">{link}</li>
+                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[15px] lg:leading-[28px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer">{link}</li>
                 ))}
               </ul>
             </div>
@@ -77,15 +87,15 @@ const Footer = () => {
         </div>
         
         {/* Footer Bottom */}
-        <div className="pt-10 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[13px] font-medium text-gray-500">
-            © 2026 CloudFire IT Services. All rights reserved.
+        <div className="pt-8 lg:pt-5 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center mt-12 gap-4 md:gap-0">
+          <p className="font-['Segoe_UI',sans-serif] font-normal text-[12px] text-gray-500 text-center md:text-left">
+            © 2026 CloudFire IT Services, &nbsp;All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center gap-8 text-[13px] font-medium text-gray-600">
-            <span className="hover:text-primary transition-colors cursor-pointer">Contact Us</span>
-            <span className="hover:text-primary transition-colors cursor-pointer">Request a Demo</span>
-            <span className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-primary transition-colors cursor-pointer">Terms of Service</span>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 font-['Segoe_UI',sans-serif] text-[13px] font-medium text-gray-600">
+            <span className="hover:text-[#ff7301] transition-colors cursor-pointer">Contact Us</span>
+            <span className="hover:text-[#ff7301] transition-colors cursor-pointer">Request a Demo</span>
+            <span className="hover:text-[#ff7301] transition-colors cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-[#ff7301] transition-colors cursor-pointer">Terms of Service</span>
           </div>
         </div>
       </div>

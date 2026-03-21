@@ -17,22 +17,20 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden space-y-20">
         {/* Full Width Hero */}
         <Hero />
         
-        {/* Constrained sections */}
-        <div className="max-w-[1400px] mx-auto px-6 space-y-20">
-          <About />
-          <HireTalent />
-          <CoreOfferings />
-          <Interview />
-          <Workflow />
-          <CTABanner />
-          <Industries />
-          <Clients />
-          <Network />
-        </div>
+        {/* Sections handle their own width to allow background colors to span full page width */}
+        <About />
+        <HireTalent />
+        <CoreOfferings />
+        <Interview />
+        <Workflow />
+        <CTABanner />
+        <Industries />
+        <Clients />
+        <Network />
       </main>
 
       <Footer />

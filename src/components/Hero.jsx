@@ -4,9 +4,16 @@ const Hero = () => {
   return (
     <section 
       id="home"
-      className="relative w-full min-h-[850px] h-[90vh] bg-[url('/Assests/image-banner.png')] bg-cover bg-center flex flex-col justify-center px-10 md:px-24 overflow-hidden"
+      className="relative w-full min-h-[850px] h-[90vh] flex flex-col justify-center px-10 md:px-24 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent pointer-events-none"></div>
+      {/* Background Layer 1: Base Image */}
+      <div className="absolute inset-0 bg-[url('/Assests/image-banner.png')] bg-cover bg-center"></div>
+      
+      {/* Background Layer 2: Overlay Image (banner-bg.png) */}
+      <div className="absolute inset-0 bg-[url('/Assests/banner-bg.png')] bg-cover bg-center mix-blend-overlay opacity-60"></div>
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent pointer-events-none"></div>
       
       <div className="relative z-10 max-w-[900px]">
         <h1 className="font-serif text-6xl md:text-8xl lg:text-[96px] leading-[1.05] text-white font-bold mb-8">

@@ -10,21 +10,28 @@ const Clients = () => {
   ];
 
   return (
-    <section className="py-20 text-center">
-      <h2 className="text-4xl font-extrabold mb-12">A Few OF Our Clients</h2>
-      <div className="flex flex-wrap justify-center gap-6 items-center">
-        {clientLogos.map((client, idx) => (
-          <div 
-            key={idx} 
-            className="bg-white px-9 py-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center min-w-[180px] h-[100px] hover:shadow-md transition-shadow"
-          >
-            <img 
-              src={client.src} 
-              alt={client.name} 
-              className="w-full h-full object-contain" 
-            />
-          </div>
-        ))}
+    <section className="py-24 bg-white text-center">
+      <div className="max-w-[1400px] mx-auto px-6 overflow-hidden">
+        {/* Heading: Georgia, Bold, 48px */}
+        <h2 className="font-serif font-bold text-[48px] text-gray-900 mb-20 leading-tight">
+          A Few OF Our Clients
+        </h2>
+        
+        {/* Logos in one line (Running row) */}
+        <div className="flex flex-nowrap items-center gap-[30px] overflow-x-auto pb-8 scrollbar-hide justify-center">
+          {clientLogos.map((client, idx) => (
+            <div 
+              key={idx} 
+              className="w-[223.42px] h-[136px] bg-white rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-gray-50 flex items-center justify-center p-8 shrink-0 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              <img 
+                src={client.src} 
+                alt={client.name} 
+                className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-500" 
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
