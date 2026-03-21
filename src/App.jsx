@@ -17,7 +17,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <main className="overflow-x-hidden space-y-20">
+      <main className="overflow-x-hidden">
         {/* Full Width Hero */}
         <Hero />
         
