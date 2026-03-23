@@ -17,73 +17,131 @@ const Workflow = () => {
     <section className="py-24 bg-white text-center">
       <div className="max-w-[1400px] mx-auto px-6">
         {/* Main Heading */}
-        <h2 className="font-serif font-bold text-[48px] text-gray-900 mb-4 leading-tight">
+        <h2 className="font-serif font-bold text-[32px] sm:text-[48px] text-gray-900 mb-4 leading-tight text-center">
           How It Works
         </h2>
         
         {/* Main Subtitle */}
-        <p className="font-sans font-normal text-[18px] leading-[24px] text-gray-500 max-w-3xl mx-auto mb-20 px-4">
+        <p className="font-sans font-normal text-sm sm:text-[18px] leading-[24px] text-gray-500 max-w-3xl mx-auto mb-12 sm:mb-20 px-4">
           Our Streamlined Process Connects You With Elite AI Talent Quickly And Efficiently, Ensuring A Perfect Match For Your Innovation Needs.
         </p>
         
-        <div className="flex flex-col lg:flex-row gap-[40px] items-center lg:items-start justify-center">
-          {/* Side Nav (Tabs) */}
-          <div className="flex flex-col gap-[15px] w-full max-w-[380px]">
-            {workflowSteps.map(step => (
-              <div 
-                key={step.id} 
-                className={`flex items-center gap-[20px] px-6 sm:px-8 py-4 sm:py-0 rounded-[15px] cursor-pointer transition-all duration-300 border-2 text-left w-full sm:w-[380px] h-auto sm:h-[82px] shadow-sm ${
-                  activeStep === step.id 
-                    ? 'bg-white border-primary shadow-[0_10px_30px_rgba(255,115,1,0.1)]' 
-                    : 'bg-[#f8f8f8] border-transparent hover:bg-white hover:border-gray-200'
-                }`}
-                onClick={() => setActiveStep(step.id)}
-              >
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[14px] shrink-0 transition-all ${
-                  activeStep === step.id ? 'bg-[#ff7301] text-white shadow-lg shadow-orange-500/30' : 'bg-white text-gray-400'
-                }`}>{step.id}</div>
-                <div className="flex-1 flex items-center justify-between">
-                  <span className={`font-serif font-normal text-[18px] sm:text-[20px] leading-tight sm:leading-[12px] transition-colors ${
-                    activeStep === step.id ? 'text-gray-900' : 'text-gray-500'
-                  }`}>{step.title}</span>
-                  {activeStep === step.id && <span className="text-[#ff7301] text-xs ml-2">▶</span>}
-                </div>
-              </div>
-            ))}
+        <div className="flex flex-col lg:flex-row gap-[30px] lg:gap-[40px] items-center lg:items-start justify-center">
+          {/* Side Nav (Tabs/List on Mobile) */}
+          <div className="flex flex-col gap-4 sm:gap-[15px] w-full max-w-[380px]">
+            {workflowSteps.map(step => {
+              const isActive = activeStep === step.id;
+              return (
+                <React.Fragment key={step.id}>
+                  {/* Step Card */}
+                  <div 
+                    className={`flex items-center gap-[15px] sm:gap-[20px] px-6 sm:px-8 py-4 sm:py-0 rounded-[15px] cursor-pointer transition-all duration-300 border-2 text-left w-full sm:w-[380px] h-auto sm:h-[82px] shadow-sm ${
+                      isActive 
+                        ? 'bg-white border-[#ff7301] shadow-[0_10px_30px_rgba(255,115,1,0.1)]' 
+                        : 'bg-[#f8f8f8] border-transparent hover:bg-white hover:border-gray-200'
+                    }`}
+                    onClick={() => setActiveStep(step.id)}
+                  >
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[14px] shrink-0 transition-all ${
+                      isActive ? 'bg-[#ff7301] text-white shadow-lg shadow-orange-500/30' : 'bg-white text-gray-400'
+                    }`}>{step.id}</div>
+                    <div className="flex-1 flex items-center justify-between">
+                      <span className={`font-serif font-normal text-base sm:text-[20px] leading-tight transition-colors ${
+                        isActive ? 'text-gray-900' : 'text-gray-500'
+                      }`}>{step.title}</span>
+                      {isActive && <span className="text-[#ff7301] text-xs ml-2">▶</span>}
+                    </div>
+                  </div>
+
+                  {/* Inline Mobile Content - only shows if isActive and on screens smaller than lg */}
+                  {isActive && (
+                    <div className="flex lg:hidden flex-col w-full bg-white p-6 sm:p-10 rounded-[25px] border border-gray-100 shadow-[0_15px_60px_rgba(0,0,0,0.06)] text-left mb-4 sm:mb-8">
+                      <div className="flex items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
+                        <div className="w-14 h-14 bg-[#ff7301] text-white rounded-[16px] flex items-center justify-center font-bold text-[24px] shadow-xl shadow-orange-500/20 shrink-0">
+                          {step.id}
+                        </div>
+                        <div className="pt-1">
+                          <span className="font-['Segoe_UI',sans-serif] font-semibold text-[13px] text-[#ff7301] uppercase tracking-[0.1em] block mb-1">Step {step.id}</span>
+                          <h3 className="font-serif font-bold text-[22px] text-gray-900 leading-tight">{step.title}</h3>
+                        </div>
+                      </div>
+                      
+                      <p className="font-['Segoe_UI',sans-serif] font-normal text-[15px] sm:text-[16px] text-gray-600 leading-relaxed mb-8 sm:mb-10">
+                        {step.content}
+                      </p>
+
+                      {/* Sub-boxes (Stacked on mobile) */}
+                      <div className="flex flex-col gap-4 mb-8">
+                        {[1, 2, 3].map(i => (
+                          <div 
+                            key={i} 
+                            className="relative w-full py-5 bg-[#f9f9f9] rounded-[15px] flex items-center px-6 shadow-[0_8px_20px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden"
+                          >
+                            <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#f7941d]"></div>
+                            <div className="font-['Segoe_UI',sans-serif] font-medium text-[15px] text-gray-900 flex-1">
+                              In-Depth Discovery Session
+                            </div>
+                            {i === 2 && <span className="text-[#ff7301] text-[10px]">▶</span>}
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Navigation buttons */}
+                      <div className="flex items-center justify-between gap-4 pt-6 border-t border-gray-100">
+                        <button 
+                          className="flex-1 h-[45px] rounded-xl font-['Segoe_UI',sans-serif] font-semibold text-[13px] bg-white text-gray-500 border border-gray-200 hover:border-gray-400 disabled:opacity-30 flex items-center justify-center" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveStep(Math.max(1, activeStep - 1));
+                          }}
+                          disabled={activeStep === 1}
+                        >
+                          Previous Step
+                        </button>
+                        <button 
+                          className="flex-1 h-[45px] rounded-xl font-['Segoe_UI',sans-serif] font-semibold text-[13px] bg-primary text-white shadow-lg shadow-orange-500/10 flex items-center justify-center gap-2 disabled:opacity-30" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveStep(Math.min(workflowSteps.length, activeStep + 1));
+                          }}
+                          disabled={activeStep === workflowSteps.length}
+                        >
+                          Next Step <span className="text-[10px]">▶</span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </div>
 
-          {/* Content Column (Large box) */}
-          <div className="w-full max-w-[860px] h-auto lg:min-h-[532px] bg-white p-6 sm:p-12 rounded-[25px] border border-gray-100 shadow-[0_15px_60px_rgba(0,0,0,0.04)] text-left flex flex-col justify-between">
+          {/* Right Detail Box (Desktop Only) */}
+          <div className="hidden lg:flex w-full max-w-[860px] h-auto lg:min-h-[532px] bg-white p-8 lg:p-12 rounded-[25px] border border-gray-100 shadow-[0_15px_60px_rgba(0,0,0,0.04)] text-left flex-col justify-between">
             <div>
-              <div className="flex items-start gap-6 sm:gap-8 mb-8 sm:mb-10">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff7301] text-white rounded-[16px] sm:rounded-[18px] flex items-center justify-center font-bold text-[28px] sm:text-[32px] shadow-xl shadow-orange-500/20 shrink-0">
+              <div className="flex items-start gap-8 mb-10">
+                <div className="w-16 h-16 bg-[#ff7301] text-white rounded-[18px] flex items-center justify-center font-bold text-[32px] shadow-xl shadow-orange-500/20 shrink-0">
                   {activeStep}
                 </div>
                 <div className="pt-1">
-                  {/* Step Label */}
-                  <span className="font-['Segoe_UI',sans-serif] font-semibold text-[14px] sm:text-[15px] leading-[26px] text-[#ff7301] uppercase tracking-[0.1em] block mb-1">Step {activeStep}</span>
-                  {/* Content Title */}
-                  <h3 className="font-serif font-bold text-[20px] sm:text-[24px] text-gray-900 leading-tight">{currentStep.title}</h3>
+                  <span className="font-['Segoe_UI',sans-serif] font-semibold text-[15px] leading-[26px] text-[#ff7301] uppercase tracking-[0.1em] block mb-1">Step {activeStep}</span>
+                  <h3 className="font-serif font-bold text-[24px] text-gray-900 leading-tight">{currentStep.title}</h3>
                 </div>
               </div>
               
-              {/* Content body */}
-              <p className="font-['Segoe_UI',sans-serif] font-normal text-[16px] sm:text-[18px] text-gray-600 leading-relaxed sm:leading-[26px] mb-8 sm:mb-12">
+              <p className="font-['Segoe_UI',sans-serif] font-normal text-[18px] text-gray-600 leading-[26px] mb-12">
                 {currentStep.content}
               </p>
 
-              {/* Sub-boxes */}
-              <div className="flex gap-[20px] flex-wrap justify-center sm:justify-start">
+              <div className="flex gap-[20px] flex-wrap justify-start">
                 {[1, 2, 3].map(i => (
                   <div 
                     key={i} 
-                    className="relative w-full sm:w-[217px] h-auto sm:h-[96px] py-4 sm:py-0 bg-[#f9f9f9] rounded-[12px] flex items-center justify-center text-center shadow-[0_10px_25px_rgba(0,0,0,0.06)] border border-gray-100 overflow-hidden group hover:shadow-xl transition-all"
+                    className="relative w-[217px] h-[96px] bg-[#f9f9f9] rounded-[12px] flex items-center justify-center text-center shadow-[0_10px_25px_rgba(0,0,0,0.06)] border border-gray-100 overflow-hidden group hover:shadow-xl transition-all"
                   >
-                    {/* The prominent orange left accent bar */}
                     <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#f7941d]"></div>
-                    
-                    <div className="font-['Segoe_UI',sans-serif] font-medium text-[16px] sm:text-[18px] leading-tight sm:leading-[22px] text-gray-900 px-6 sm:px-4">
-                      In-Depth Discovery <br className="hidden sm:block" /> Session
+                    <div className="font-['Segoe_UI',sans-serif] font-medium text-[18px] leading-[22px] text-gray-900 px-4">
+                      In-Depth Discovery <br /> Session
                     </div>
                   </div>
                 ))}
