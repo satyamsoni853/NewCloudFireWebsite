@@ -1,41 +1,39 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Clients from './components/Clients';
-import About from './components/About';
-import HireTalent from './components/HireTalent';
-import Interview from './components/Interview';
-import Workflow from './components/Workflow';
-import CoreOfferings from './components/CoreOfferings';
-import CTABanner from './components/CTABanner';
-import Industries from './components/Industries';
-import Network from './components/Network';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import ServicePage from './pages/ServicePage';
+import { useEffect } from 'react';
+
+// ScrollToTop component to reset scroll position on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      
-      <main className="overflow-x-hidden">
-        {/* Full Width Hero */}
-        <Hero />
+    <Router>
+      <div className="min-h-screen bg-white">
+        <ScrollToTop />
+        <Header />
         
-        {/* Sections handle their own width to allow background colors to span full page width */}
-        <About />
-        <HireTalent />
-        <CoreOfferings />
-        <Interview />
-        <Workflow />
-        <CTABanner />
-        <Industries />
-        <Clients />
-        <Network />
-      </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicePage />} />
+        </Routes>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+

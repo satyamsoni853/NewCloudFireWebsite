@@ -10,10 +10,10 @@ const Clients = () => {
   ];
 
   return (
-    <section className="py-24 bg-white text-center">
+    <section id="clients" className="py-24 bg-white text-center">
       <div className="max-w-[1400px] mx-auto px-6 overflow-hidden">
         {/* Heading: Georgia, Bold, 48px */}
-        <h2 className="font-serif font-bold text-[48px] text-gray-900 mb-20 leading-tight">
+        <h2 className="font-serif font-bold text-[32px] md:text-[48px] text-gray-900 mb-10 md:mb-20 leading-tight">
           A Few OF Our Clients
         </h2>
 

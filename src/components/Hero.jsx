@@ -32,18 +32,6 @@ const Hero = () => {
             </button>
           </div>
         </div>
-
-        {/* Mobile-only Image (Stacks below with better proportions) */}
-        <div className="md:hidden mt-20 relative flex justify-center w-full">
-          <div className="relative w-full max-w-[500px] aspect-[4/3] overflow-hidden shadow-2xl shadow-black/60 border border-white/5">
-            <img 
-              src="/Assests/image-banner.png" 
-              className="w-full h-full object-cover" 
-              alt="Cloudfire Solutions"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          </div>
-        </div>
       </div>
 
       {/* Decorative desktop-only arrow/element from original code */}

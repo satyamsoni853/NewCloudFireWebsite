@@ -2,7 +2,7 @@ import React from 'react';
 
 const Network = () => {
   return (
-    <section className="py-12 sm:py-24 bg-white text-center">
+    <section id="network" className="py-12 sm:py-24 bg-white text-center">
       <div className="max-w-[1400px] mx-auto px-6">
         {/* Heading: Georgia, Bold, scaling from 32px on mobile to 48px on desktop */}
         <h2 className="font-serif font-bold text-[32px] sm:text-[48px] text-gray-900 mb-6 sm:mb-4 leading-tight">
