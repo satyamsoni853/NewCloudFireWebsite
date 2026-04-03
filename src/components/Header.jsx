@@ -55,9 +55,14 @@ const Header = () => {
               <Link 
                 key={item.name}
                 to={item.path} 
-                className="text-[#333] text-sm lg:text-base font-medium hover:text-[#ff7301] transition-colors whitespace-nowrap"
+                className={`relative pb-3 text-sm lg:text-base font-medium transition-colors whitespace-nowrap ${
+                  isActive ? 'text-[#111111]' : 'text-[#333] hover:text-[#ff7301]'
+                }`}
               >
                 {item.name}
+                {isActive && (
+                  <span className="absolute inset-x-0 bottom-0 mx-auto h-0.5 w-10 rounded-full bg-[#ff7301]" />
+                )}
               </Link>
             );
           })}
@@ -110,4 +115,3 @@ const Header = () => {
 };
 
 export default Header;
-

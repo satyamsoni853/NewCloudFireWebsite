@@ -1,44 +1,20 @@
 import React from 'react';
 import Hero from '../components/ServiceHero';
-import Clients from '../components/Clients';
-import Industries from '../components/Industries';
-import MoodleServices from '../components/MoodleServices';
-import SoftwareEngineeringFAQ from '../components/SoftwareEngineeringFAQ';
+import ServiceFeatures from '../components/ServiceFeatures';
+import CloudfireOfferings from '../components/CloudfireOfferings';
 import SoftwareEngineeringGrid from '../components/SoftwareEngineeringGrid';
-import ConsultingCTA from '../components/ConsultingCTA';
+import WhatMakesUsDifferent from '../components/WhatMakesUsDifferent';
 
 function ServicePage() {
   return (
     <main className="overflow-x-hidden">
-      {/* Services Hero Section */}
       <Hero />
-      {/* Software Engineering Grid - Added */}
+      <ServiceFeatures />
+      <CloudfireOfferings />
       <SoftwareEngineeringGrid />
-
-         
-      {/* Clients Section */}
-      <Clients />
-      
-      {/* Software Engineering FAQ (Accordion Section) - Added */}
-      <SoftwareEngineeringFAQ />
-      {/* Consulting Call to Action - Added */}
-      <ConsultingCTA />
-      
-      
-      {/* Moodle Services Section */}
-      <MoodleServices />
-      
-      
-      
-      
-      
-      
-      
-   
+      <WhatMakesUsDifferent />
     </main>
   );
 }
 
 export default ServicePage;
-
-

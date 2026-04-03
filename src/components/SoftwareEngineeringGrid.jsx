@@ -1,83 +1,93 @@
 import React from 'react';
 
-const offeringItems = Array(5).fill({
-  title: 'Software Engineering Services We Offer',
-  desc: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book. It Has Survived Not Only Five Centuries, But Also The Leap Into Electronic Typesetting, Remaining Essentially Unchanged.",
-  image: '/service/services.png'
-});
+const offeringItems = [
+  {
+    title: 'Software Engineering Services We Offer',
+    desc: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.",
+    image: '/service/services.png',
+  },
+  {
+    title: 'Software Engineering Services We Offer',
+    desc: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.",
+    image: '/service/services.png',
+  },
+  {
+    title: 'Software Engineering Services We Offer',
+    desc: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.",
+    image: '/service/services.png',
+  },
+  {
+    title: 'Software Engineering Services We Offer',
+    desc: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.",
+    image: '/service/services.png',
+  },
+  {
+    title: 'Software Engineering Services We Offer',
+    desc: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.",
+    image: '/service/services.png',
+  },
+];
 
 const SoftwareEngineeringGrid = () => {
   return (
-    <section className="py-24 bg-[#FAFBFF]">
-      <div className="max-w-[1400px] mx-auto px-6">
-        <h2 className="font-[Georgia] font-bold text-[36px] md:text-[48px] text-gray-900 text-center mb-20 leading-tight">
-          Software Engineering Services We Offer
+    <section className="bg-white py-16 md:py-20 lg:py-24">
+      <div className="mx-auto w-full max-w-[1340px] px-6 sm:px-8 md:px-14 lg:px-16">
+        <h2 className="mb-12 text-center text-[34px] font-bold leading-tight text-gray-900 sm:text-[42px] md:mb-16 md:text-5xl lg:mb-20">
+          Software Engineering
+          <br />
+          Services We Offer
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
-          {/* Row 1: 3 cards */}
+
+        <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10 xl:gap-12">
           {offeringItems.slice(0, 3).map((item, i) => (
-            <div key={i} className="bg-white rounded-[40px] p-6 sm:p-8 shadow-[0_15px_45px_rgba(0,0,0,0.06)] border border-gray-100/50 flex flex-col justify-between items-start hover:shadow-xl transition-all duration-300 w-full max-w-[408px] h-auto min-h-[528px] mx-auto group">
-              <div>
-                <div className="w-full max-w-[372.83px] h-[206px] rounded-[30px] overflow-hidden mb-10 mx-auto">
-                  <img src={item.image} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-700" alt={item.title} />
-                </div>
-                <h3 className="font-[Georgia] font-bold text-[23px] text-gray-900 mb-6 leading-tight">
+            <div
+              key={i}
+              className="group flex h-full flex-col rounded-[20px] border border-gray-100 bg-white p-4 shadow-[0_10px_40px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-xl"
+            >
+              <div className="mb-6 aspect-video w-full overflow-hidden rounded-[15px]">
+                <img
+                  src={item.image}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt={item.title}
+                />
+              </div>
+              <div className="flex grow flex-col px-2 pb-4">
+                <h3 className="mb-4 text-xl font-bold leading-tight text-gray-900">
                   {item.title}
                 </h3>
-                <p className="font-['Segoe_UI'] font-normal text-[15px] leading-[22px] text-gray-600 mb-8">
-                  {item.desc}
-                </p>
+                <p className="mb-6 grow text-sm leading-relaxed text-gray-600">{item.desc}</p>
+                <button className="self-start rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90">
+                  Know more
+                </button>
               </div>
-              <button className="bg-[#ff7301] text-white font-bold text-[14px] w-[139px] h-[40px] flex items-center justify-center rounded-xl hover:opacity-90 transition-opacity">
-                Know more
-              </button>
             </div>
           ))}
-          
-          {/* Row 2: 2 centered cards - we wrap them in a flexbox to center them in the 3-col grid layout on lg screens */}
-          <div className="hidden lg:flex lg:col-span-3 justify-center gap-12">
-             {offeringItems.slice(3, 5).map((item, i) => (
-              <div key={i} className="bg-white rounded-[40px] p-8 shadow-[0_15px_45px_rgba(0,0,0,0.06)] border border-gray-100/50 flex flex-col justify-between items-start hover:shadow-xl transition-all duration-300 w-full max-w-[408px] h-[528px] group">
-                <div>
-                  <div className="w-[372.83px] max-w-full h-[206px] rounded-[30px] overflow-hidden mb-10 mx-auto">
-                    <img src={item.image} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-700" alt={item.title} />
-                  </div>
-                  <h3 className="font-[Georgia] font-bold text-[23px] text-gray-900 mb-6 leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="font-['Segoe_UI'] font-normal text-[15px] leading-[22px] text-gray-600 mb-8">
-                    {item.desc}
-                  </p>
-                </div>
-                <button className="bg-[#ff7301] text-white font-bold text-[14px] w-[139px] h-[40px] flex items-center justify-center rounded-xl hover:opacity-90 transition-opacity">
-                  Know more
-                </button>
-              </div>
-            ))}
-          </div>
+        </div>
 
-          {/* Mobile version of Row 2: handled automatically by standard grid-cols-1 or 2 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:hidden gap-10 col-span-full">
-             {offeringItems.slice(3, 5).map((item, i) => (
-              <div key={i} className="bg-white rounded-[40px] p-8 shadow-[0_15px_45px_rgba(0,0,0,0.06)] border border-gray-100/50 flex flex-col justify-between items-start hover:shadow-xl transition-all duration-300 w-full max-w-[408px] h-[528px] mx-auto group">
-                <div>
-                  <div className="w-[372.83px] max-w-full h-[206px] rounded-[30px] overflow-hidden mb-10">
-                    <img src={item.image} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-700" alt={item.title} />
-                  </div>
-                  <h3 className="font-[Georgia] font-bold text-[23px] text-gray-900 mb-6 leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="font-['Segoe_UI'] font-normal text-[15px] leading-[22px] text-gray-600 mb-8">
-                    {item.desc}
-                  </p>
-                </div>
-                <button className="bg-[#ff7301] text-white font-bold text-[14px] w-[139px] h-[40px] flex items-center justify-center rounded-xl hover:opacity-90 transition-opacity">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-auto lg:max-w-[860px] lg:gap-10 xl:gap-12">
+          {offeringItems.slice(3, 5).map((item, i) => (
+            <div
+              key={i}
+              className="group w-full rounded-[20px] border border-gray-100 bg-white p-4 shadow-[0_10px_40px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-xl"
+            >
+              <div className="mb-6 aspect-video w-full overflow-hidden rounded-[15px]">
+                <img
+                  src={item.image}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt={item.title}
+                />
+              </div>
+              <div className="flex grow flex-col px-2 pb-4">
+                <h3 className="mb-4 text-xl font-bold leading-tight text-gray-900">
+                  {item.title}
+                </h3>
+                <p className="mb-6 grow text-sm leading-relaxed text-gray-600">{item.desc}</p>
+                <button className="self-start rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90">
                   Know more
                 </button>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

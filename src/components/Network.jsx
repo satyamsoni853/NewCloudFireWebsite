@@ -2,52 +2,47 @@ import React from 'react';
 
 const Network = () => {
   return (
-    <section id="network" className="py-12 sm:py-24 bg-white text-center">
-      <div className="max-w-[1400px] mx-auto px-6">
-        {/* Heading: Georgia, Bold, scaling from 32px on mobile to 48px on desktop */}
-        <h2 className="font-serif font-bold text-[32px] sm:text-[48px] text-gray-900 mb-6 sm:mb-4 leading-tight">
+    <section id="network" className="bg-white py-12 text-center sm:py-24">
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-8 md:px-14 lg:px-16">
+        <h2 className="mb-6 font-serif text-[32px] font-bold leading-tight text-gray-900 sm:mb-4 sm:text-[48px]">
           A Truly Unique Global Cloud Network
         </h2>
-        
-        {/* Subtitle: Segoe UI, 400, scaling from 14px to 18px */}
-        <p className="font-['Segoe_UI',sans-serif] font-normal text-sm sm:text-[18px] leading-relaxed sm:leading-[24px] text-gray-500 max-w-2xl mx-auto mb-12 sm:mb-20 px-4">
+
+        <p className="mx-auto mb-12 max-w-2xl px-4 font-['Segoe_UI',sans-serif] text-sm font-normal leading-relaxed text-gray-500 sm:mb-20 sm:text-[18px] sm:leading-[24px]">
           Powering Innovation Across Industries With Cutting-Edge AI Talent Solutions
         </p>
-        
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
-          {/* Map Image Section */}
-          <div className="relative group flex justify-center w-full order-1">
+
+        <div className="flex flex-col items-center gap-12 lg:grid lg:grid-cols-2">
+          <div className="group relative order-1 flex w-full justify-center">
             <div className="relative w-full max-w-[657px]">
-               {/* Blob background for mobile consistency */}
-               <div className="absolute inset-0 bg-gray-50 rounded-full blur-3xl opacity-50 scale-110"></div>
-               <img 
-                 src="/Assests/connected-world.svg" 
-                 className="relative w-full h-auto object-contain opacity-100 group-hover:scale-105 transition-transform duration-1000 z-10" 
-                 alt="Global Map" 
-               />
+              <div className="absolute inset-0 scale-110 rounded-full bg-gray-50 opacity-50 blur-3xl"></div>
+              <img
+                src="/Assests/connected-world.svg"
+                className="relative z-10 h-auto w-full object-contain opacity-100 transition-transform duration-1000 group-hover:scale-105"
+                alt="Global Map"
+              />
             </div>
           </div>
-          
-          {/* Stats Section */}
-          <div className="w-full order-2">
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:flex lg:flex-wrap gap-4 sm:gap-8 justify-center items-center">
+
+          <div className="order-2 w-full">
+            <div className="grid grid-cols-2 items-center justify-center gap-4 sm:gap-6 lg:flex lg:flex-wrap lg:justify-center lg:gap-8">
               {[
                 { val: '14+', label: 'Year of Experience' },
                 { val: '600+', label: 'Happy Clients' },
                 { val: '250+', label: 'CMS Delivered' },
                 { val: '4.5', label: 'Service Rating' },
-                { val: '200+', label: 'LMS Delivered' }
+                { val: '200+', label: 'LMS Delivered' },
               ].map((stat, idx) => (
-                <div 
-                  key={idx} 
-                  className={`bg-white p-6 sm:p-8 rounded-[20px] border border-gray-100/50 shadow-[0_15px_45px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-[100px] sm:h-[136px] w-full lg:w-[266px] ${
-                    idx === 4 ? 'col-span-2 mx-auto max-w-[180px] sm:max-w-none' : ''
+                <div
+                  key={idx}
+                  className={`flex h-[110px] w-full flex-col items-center justify-center rounded-[20px] border border-gray-100/50 bg-white p-4 text-center shadow-[0_15px_45px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:h-[136px] sm:p-6 lg:w-[266px] lg:p-8 ${
+                    idx === 4 ? 'col-span-2 mx-auto max-w-[220px] sm:max-w-[280px] lg:max-w-none' : ''
                   }`}
                 >
-                  <h3 className="font-['Segoe_UI',sans-serif] font-bold text-[28px] sm:text-[47px] text-[#ffb44a] leading-tight mb-1">
+                  <h3 className="mb-1 font-['Segoe_UI',sans-serif] text-[28px] font-bold leading-tight text-[#ffb44a] sm:text-[47px]">
                     {stat.val}
                   </h3>
-                  <p className="font-['Segoe_UI',sans-serif] font-normal text-[10px] sm:text-[16px] text-gray-500 uppercase sm:capitalize tracking-wider sm:tracking-normal">
+                  <p className="px-1 font-['Segoe_UI',sans-serif] text-[10px] font-normal uppercase tracking-wider text-gray-500 sm:text-[16px] sm:capitalize sm:tracking-normal">
                     {stat.label}
                   </p>
                 </div>

@@ -1,33 +1,31 @@
-import React from "react";
+import React from 'react';
 
 const Clients = () => {
   const clientLogos = [
-    { name: "NSU", src: "/Assests/NSU 1.png" },
-    { name: "Current", src: "/Assests/NSU 1-1.png" },
-    { name: "NEFFEX", src: "/Assests/image 1.png" },
-    { name: "101 blockchains", src: "/Assests/pikwly59 1.png" },
-    { name: "Sunspots", src: "/Assests/image 2.png" },
+    { name: 'NSU', src: '/Assests/NSU 1.png' },
+    { name: 'Current', src: '/Assests/NSU 1-1.png' },
+    { name: 'NEFFEX', src: '/Assests/image 1.png' },
+    { name: '101 blockchains', src: '/Assests/pikwly59 1.png' },
+    { name: 'Sunspots', src: '/Assests/image 2.png' },
   ];
 
   return (
-    <section id="clients" className="py-24 bg-white text-center">
-      <div className="max-w-[1400px] mx-auto px-6 overflow-hidden">
-        {/* Heading: Georgia, Bold, 48px */}
-        <h2 className="font-serif font-bold text-[32px] md:text-[48px] text-gray-900 mb-10 md:mb-20 leading-tight">
+    <section id="clients" className="bg-white py-16 text-center md:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1400px] overflow-hidden px-6 sm:px-8 md:px-14 lg:px-16">
+        <h2 className="mb-10 font-serif text-[32px] font-bold leading-tight text-gray-900 md:mb-16 md:text-[48px] lg:mb-20">
           A Few OF Our Clients
         </h2>
 
-        {/* Logos in one line (Running row) */}
-        <div className="flex flex-nowrap items-center gap-[30px] overflow-x-auto pb-8 scrollbar-hide justify-center">
+        <div className="scrollbar-hide flex justify-start gap-5 overflow-x-auto pb-6 sm:justify-center sm:gap-6 md:gap-[30px] md:pb-8">
           {clientLogos.map((client, idx) => (
             <div
               key={idx}
-              className="w-[223.42px] h-[136px] bg-white rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-gray-50 flex items-center justify-center p-8 shrink-0 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="flex h-[112px] w-[180px] shrink-0 items-center justify-center rounded-[20px] border border-gray-50 bg-white p-5 shadow-[0_10px_35px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:h-[124px] sm:w-[200px] sm:p-6 md:h-[136px] md:w-[223px] md:p-8"
             >
               <img
                 src={client.src}
                 alt={client.name}
-                className="max-w-full max-h-full object-contain  transition-all duration-500"
+                className="max-h-full max-w-full object-contain transition-all duration-500"
               />
             </div>
           ))}

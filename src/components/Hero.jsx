@@ -7,7 +7,14 @@ const Hero = () => {
       className="relative w-full min-h-screen md:min-h-[850px] md:h-[90vh] flex flex-col justify-center overflow-hidden bg-[#292929] md:bg-transparent"
     >
       {/* Desktop-only Background Layers */}
-      <div className="hidden md:block absolute inset-0 bg-[url('/Assests/image-banner.png')] bg-cover bg-center"></div>
+      <video
+        className="hidden md:block absolute inset-0 h-full w-full object-cover"
+        src="/Assests/video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
       <div className="hidden md:block absolute inset-0 bg-[url('/Assests/banner-bg.png')] bg-cover bg-center mix-blend-overlay opacity-60"></div>
       <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent pointer-events-none"></div>
 
@@ -30,6 +37,21 @@ const Hero = () => {
             <button className="flex-1 sm:flex-none bg-white text-[#111] px-4 sm:px-10 py-4 rounded-xl font-bold text-sm sm:text-lg hover:bg-gray-100 transition-colors shadow-lg">
               I Want Developer
             </button>
+          </div>
+        </div>
+
+        {/* Mobile-only Video */}
+        <div className="md:hidden mt-20 relative flex justify-center w-full">
+          <div className="relative w-full max-w-[500px] aspect-[4/3] overflow-hidden shadow-2xl shadow-black/60 border border-white/5">
+            <video
+              className="w-full h-full object-cover"
+              src="/Assests/video.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
