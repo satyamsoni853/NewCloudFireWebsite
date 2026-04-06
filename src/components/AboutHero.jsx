@@ -14,7 +14,7 @@ const AboutHero = () => {
         }}
       />
       <div className="absolute inset-0 z-0 bg-white/60" />
-      <div className="absolute inset-x-0 bottom-0 z-0 h-24 bg-white/70 md:h-28" />
+      <div className="absolute inset-x-0 bottom-0 z-0 h-24 bg-white md:h-28" />
 
       <div className="relative z-10 mx-auto flex h-full w-full items-center px-6 pb-12 pt-28 sm:px-8 md:px-24 md:pb-16 md:pt-32 lg:px-24">
         <div className="grid w-full items-end gap-10 md:grid-cols-[minmax(260px,1fr)_minmax(320px,520px)]">

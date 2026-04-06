@@ -104,7 +104,7 @@ const ExpertiseGrid = () => {
               className="flex flex-col items-center group"
             >
               {/* Illustration and Layout */}
-              <div className="flex justify-center mb-[-60px] relative z-10" style={{ width: '362px', height: '318px' }}>
+              <div className="flex justify-center mb-[-60px] relative " style={{ width: '362px', height: '318px' }}>
                 <img 
                   src={item.image} 
                   alt={item.title} 
@@ -114,7 +114,7 @@ const ExpertiseGrid = () => {
  
                {/* Bottom Content Box */}
               <div 
-                className="rounded-[12px] px-8 pb-8 pt-20 text-left shadow-lg flex flex-col justify-start"
+                className="rounded-[12px] px-8 pb-8 pt-20 text-left shadow-lg flex z-10 flex-col justify-start"
                 style={{ 
                   width: '338.34px', 
                   minHeight: '197px',
