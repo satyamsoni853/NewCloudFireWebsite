@@ -30,44 +30,27 @@ const Achievements = () => {
         <span className="mb-4 block text-sm font-bold uppercase tracking-widest text-primary">
           What We Offer
         </span>
-        <h2 className="mb-5 text-[34px] font-bold text-gray-900 sm:text-[42px] md:mb-6 md:text-5xl">
+        <h2 className="achievements-title">
           Some Of Our Achievements
         </h2>
-        <p className="mx-auto mb-12 max-w-3xl text-sm leading-relaxed text-gray-600 md:mb-14 md:text-base">
+        <p className="achievements-desc">
           Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem
           Ipsum Has Been The Industry&apos;s Standard Dummy Text Ever Since The 1500s, When An
           Unknow
         </p>
 
-        <div className="mx-auto mb-6 grid max-w-6xl grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
-          {achievements.slice(0, 3).map((item, index) => (
+        <div className="flex flex-wrap justify-center gap-8">
+          {achievements.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 rounded-xl bg-white p-5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-2 sm:justify-center sm:gap-5 sm:p-6 lg:gap-6 lg:p-8"
+              className="achievement-card"
             >
-              <div className="h-14 w-14 shrink-0 sm:h-16 sm:w-16">
+              <div className="h-12 w-12 shrink-0">
                 <img src={item.icon} alt={item.label} className="h-full w-full object-contain" />
               </div>
               <div className="text-left">
-                <h3 className="text-3xl font-bold text-primary md:text-4xl">{item.number}</h3>
-                <p className="text-sm font-medium text-gray-600">{item.label}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 lg:gap-8">
-          {achievements.slice(3, 5).map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-4 rounded-xl bg-white p-5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-2 sm:justify-center sm:gap-5 sm:p-6 lg:gap-6 lg:p-8"
-            >
-              <div className="h-14 w-14 shrink-0 sm:h-16 sm:w-16">
-                <img src={item.icon} alt={item.label} className="h-full w-full object-contain" />
-              </div>
-              <div className="text-left">
-                <h3 className="text-3xl font-bold text-primary md:text-4xl">{item.number}</h3>
-                <p className="text-sm font-medium text-gray-600">{item.label}</p>
+                <h3 className="text-2xl font-bold text-primary">{item.number}</h3>
+                <p className="text-[13px] font-medium text-gray-500 uppercase tracking-tight">{item.label}</p>
               </div>
             </div>
           ))}

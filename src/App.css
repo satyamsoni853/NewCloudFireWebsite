@@ -1,4 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+/* Hero Page Sections (Shared) */
+.hero-page-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: #f6f5f3;
+}
+
+.hero-page-title {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 65px;
+  color: #141414;
+  text-transform: none;
+}
+
+.hero-page-image {
+  width: 613px;
+  height: 415px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-page-section {
+    height: auto;
+    min-height: 360px;
+  }
+  .hero-page-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .hero-page-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+}
 
 /* Design System & Base */
 :root {
@@ -217,6 +257,214 @@ section { padding: 80px 0; }
     font-weight: 600;
 }
 
+/* About Mission Section */
+.about-mission-section {
+  position: relative;
+  padding: 90px 0 100px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.about-mission-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Left image area */
+.about-mission-left {
+  position: relative;
+  padding: 20px 0 20px 30px;
+}
+
+.about-mission-image {
+  width: 578px;
+  height: 703px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px; /* Adding a slight radius for premium look */
+}
+
+/* Small decorative diamonds */
+.about-mission-diamond {
+  position: absolute;
+  pointer-events: none;
+}
+
+.about-mission-diamond--top {
+  top: 40px;
+  left: 0;
+}
+
+.about-mission-diamond--bottom {
+  bottom: 30px;
+  right: 60px;
+}
+
+/* Right text area */
+.about-mission-right {
+  padding: 20px 0;
+}
+
+.about-mission-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff7301;
+  margin-bottom: 12px;
+}
+
+.about-mission-title {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 54px;
+  color: #111;
+  margin: 0 0 28px;
+}
+
+.about-mission-text {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.about-mission-text:last-child {
+  margin-bottom: 0;
+}
+
+.about-mission-highlight {
+  color: #ff7301;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Decorative dot grid — bottom right */
+.about-mission-dots {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(7, 8px);
+  gap: 10px;
+  opacity: 0.2;
+}
+
+.about-mission-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-mission-container {
+    gap: 40px;
+    padding: 0 32px;
+  }
+  .about-mission-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-mission-section {
+    padding: 60px 0 70px;
+  }
+  .about-mission-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 0 20px;
+  }
+  .about-mission-left {
+    padding: 0;
+  }
+  .about-mission-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .about-mission-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .about-mission-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .about-mission-dots {
+    display: none;
+  }
+  .about-mission-diamond {
+    display: none;
+  }
+}
+
+/* Achievements Section */
+.achievements-title {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 54px;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.achievements-desc {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.achievement-card {
+  width: 266px;
+  height: 136px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .achievements-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .achievement-card {
+    width: 100%;
+    max-width: 266px;
+    margin: 0 auto;
+  }
+}
+
 /* Interview Section */
 .interview-section { background: white; }
 .interview-container {
@@ -291,6 +539,110 @@ section { padding: 80px 0; }
 .stat-card h3 { font-size: 2.5rem; color: var(--primary); margin: 0; }
 .stat-card p { font-size: 14px; color: var(--text-muted); margin: 5px 0 0; }
 
+/* Project CTA Section */
+.project-cta-title {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  line-height: normal;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .project-cta-title {
+    font-size: 32px;
+  }
+}
+
+/* Service Features Section */
+.service-feature-title {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 54px;
+  color: #151515;
+  margin-bottom: 32px;
+}
+
+.service-feature-text {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 70px;
+  color: #333333;
+}
+
+/* Cloudfire Offerings Section */
+.offerings-section-title {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1.1;
+  color: #111;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.offering-card {
+  width: 345px;
+  height: 310px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.offering-card:hover {
+  background: #fdfdfd;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.offering-card-title {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 23px;
+  line-height: 30px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.offering-card-desc {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #666;
+  max-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .service-feature-title, .offerings-section-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .service-feature-text {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  .offering-card {
+    width: 100%;
+    height: auto;
+    min-height: 310px;
+  }
+}
+
 /* Footer */
 .site-footer { 
   background: #f9f9f9; 
@@ -354,7 +706,103 @@ section { padding: 80px 0; }
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 1000px) {
-  .hero-section, .interview-container, .workflow-grid, .network-grid, .footer-main { grid-template-columns: 1fr; }
-  .footer-links { grid-template-columns: 1fr 1fr; }
+/* Responsive Adjustments & Global Utilities */
+@media (max-width: 1200px) {
+  .site-header {
+    padding: 0 30px;
+    top: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 991px) {
+  .site-header {
+    height: 70px;
+    padding: 0 20px;
+  }
+  .top-nav {
+    display: none; /* Mobile menu should be implemented elsewhere or simplified */
+  }
+  .request-demo {
+    transform: scale(0.9);
+  }
+  
+  .hero-section {
+    padding: 80px 20px 0 !important;
+    min-height: 600px;
+    height: auto;
+  }
+  .hero-content h1 {
+    font-size: 64px;
+  }
+  .hero-content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+
+  .site-header {
+    top: 10px;
+    width: calc(100% - 20px);
+    height: 64px;
+    border-radius: 12px;
+  }
+  
+  .brand {
+    font-size: 12px;
+  }
+
+  /* About & Mission Specific Mobile */
+  .about-mission-section {
+    padding: 40px 0;
+  }
+  
+  .hero-page-title {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Services Mobile */
+  .offerings-section-title {
+    font-size: 32px !important;
+    margin-bottom: 40px;
+  }
+  
+  .service-feature-title {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Cards & Boxes */
+  .achievement-card, .offering-card {
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .footer-main {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }

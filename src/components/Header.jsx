@@ -9,15 +9,16 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Industries', path: '/#industries' },
-    { name: 'Our Expertise', path: '/#expertise' },
+    { name: 'Industries', path: '/industries' },
+    { name: 'Our Expertise', path: '/expertise' },
     { name: 'Client Success', path: '/#clients' },
-    { name: 'Discover Cloudfire', path: '/#discover' }
+    { name: 'Discover Cloudfire', path: '/#discover' },
+    { name: 'Contact Us', path: '/contact' }
   ];
 
   return (
     <>
-      <header className="fixed md:absolute top-0 md:top-5 left-0 md:left-1/2 md:-translate-x-1/2 w-full md:w-[calc(100%-40px)] md:max-w-[1340px] h-20 bg-[#292929] md:bg-white md:rounded-2xl shadow-xl flex items-center justify-between px-6 md:px-10 z-[1000] transition-all duration-300">
+      <header className="fixed md:absolute top-0 md:top-5 left-0 md:left-1/2 md:-translate-x-1/2 w-full md:w-[calc(100%-40px)] md:max-w-[1340px] h-20 bg-[#292929] md:bg-white md:rounded-2xl shadow-xl flex items-center justify-between px-6 md:px-10 z-1000 transition-all duration-300">
         
         {/* Logo Section */}
         <Link to="/" className="flex flex-col items-start translate-z-0">
@@ -34,7 +35,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-10">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-7 h-full">
           {navItems.map((item) => {
             const isExternal = item.path.startsWith('/#');
             const isActive = pathname === item.path || (item.path === '/' && pathname === '/');
@@ -44,7 +45,7 @@ const Header = () => {
                 <a 
                   key={item.name}
                   href={item.path} 
-                  className="text-[#333] text-sm lg:text-[15px] font-medium hover:text-[#ff7301] transition-colors whitespace-nowrap"
+                  className="text-[#333] text-sm lg:text-[15px] font-medium hover:text-primary transition-colors whitespace-nowrap"
                 >
                   {item.name}
                 </a>
@@ -55,13 +56,13 @@ const Header = () => {
               <Link 
                 key={item.name}
                 to={item.path} 
-                className={`relative pb-3 text-sm lg:text-base font-medium transition-colors whitespace-nowrap ${
-                  isActive ? 'text-[#111111]' : 'text-[#333] hover:text-[#ff7301]'
+                className={`relative flex items-center h-full text-sm lg:text-[15px] font-medium transition-colors whitespace-nowrap ${
+                  isActive ? 'text-[#111111]' : 'text-[#333] hover:text-primary'
                 }`}
               >
                 {item.name}
                 {isActive && (
-                  <span className="absolute inset-x-0 bottom-0 mx-auto h-0.5 w-10 rounded-full bg-[#ff7301]" />
+                  <span className="absolute bottom-4 inset-x-0 mx-auto h-0.5 w-full max-w-[20px] rounded-full bg-primary" />
                 )}
               </Link>
             );
@@ -70,9 +71,9 @@ const Header = () => {
 
         {/* Action Button / Hamburger */}
         <div className="flex items-center gap-4">
-          <button className="hidden md:block bg-[#ff7301] text-white font-semibold text-sm md:text-base px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity">
+          <Link to="/contact" className="hidden md:block bg-primary text-white font-semibold text-sm lg:text-[15px] px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-primary/20 transition-all">
             Get in Touch
-          </button>
+          </Link>
           
           {/* Mobile Menu Toggle */}
           <button 
@@ -88,7 +89,7 @@ const Header = () => {
 
       {/* Mobile Sidebar */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-[#292929] z-[1001] flex flex-col items-center justify-center gap-6 text-xl font-bold text-white transition-all">
+        <div className="md:hidden fixed inset-0 bg-[#292929] z-1001 flex flex-col items-center justify-center gap-6 text-xl font-bold text-white transition-all">
            <button 
             className="absolute top-8 right-8 text-4xl"
             onClick={() => setIsMenuOpen(false)}
@@ -101,13 +102,13 @@ const Header = () => {
               key={item.name} 
               to={item.path} 
               onClick={() => setIsMenuOpen(false)}
-              className={pathname === item.path ? 'text-[#ff7301]' : ''}
+              className={pathname === item.path ? 'text-primary' : ''}
             >
               {item.name}
             </Link>
           ))}
           
-          <button className="bg-[#ff7301] px-10 py-4 rounded-full mt-4">Get in Touch</button>
+          <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="bg-primary px-10 py-4 rounded-full mt-4 text-white hover:bg-opacity-90">Get in Touch</Link>
         </div>
       )}
     </>

@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutHero from '../components/AboutHero';
+import AboutMission from '../components/AboutMission';
 import About from '../components/About';
 import Achievements from '../components/Achievements';
 import ProjectCTA from '../components/ProjectCTA';
@@ -14,6 +15,7 @@ function AboutPage() {
   return (
     <main className="overflow-x-hidden">
       <AboutHero />
+      <AboutMission />
       <About />
       <Achievements />
       <ProjectCTA />
