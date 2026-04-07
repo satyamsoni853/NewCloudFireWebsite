@@ -68,7 +68,7 @@ const SoftwareEngineeringGrid = () => {
                 <p className="mb-8 grow text-[15px] leading-relaxed text-[#666666] opacity-90">
                     {item.desc}
                 </p>
-                <button className="self-start rounded-[10px] bg-[#F6821F] px-8 py-3 text-[15px] font-bold text-white transition-all hover:bg-[#ED862D] shadow-lg shadow-orange-500/20 active:scale-95">
+                <button className="self-start rounded-[10px] bg-primary px-8 py-3 text-[15px] font-bold text-black transition-all hover:opacity-90 shadow-lg shadow-orange-500/20 active:scale-95">
                   Know more
                 </button>
               </div>
@@ -96,7 +96,7 @@ const SoftwareEngineeringGrid = () => {
                 <p className="mb-8 grow text-[15px] leading-relaxed text-[#666666] opacity-90">
                     {item.desc}
                 </p>
-                <button className="self-start rounded-[10px] bg-[#F6821F] px-8 py-3 text-[15px] font-bold text-white transition-all hover:bg-[#ED862D] shadow-lg shadow-orange-500/20 active:scale-95">
+                <button className="self-start rounded-[10px] bg-primary px-8 py-3 text-[15px] font-bold text-black transition-all hover:opacity-90 shadow-lg shadow-orange-500/20 active:scale-95">
                   Know more
                 </button>
               </div>

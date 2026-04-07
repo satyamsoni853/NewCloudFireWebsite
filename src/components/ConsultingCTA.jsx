@@ -11,7 +11,7 @@ const ConsultingCTA = () => {
         <h2 className="font-[Georgia] font-bold text-[36px] md:text-[48px] text-white leading-[1.2] mb-12">
           Setup A Free No-Obligation Consulting Session With Our Technology Experts
         </h2>
-        <button className="bg-[#ff7301] text-white font-bold text-lg w-[218px] h-[40px] flex items-center justify-center mx-auto rounded-xl shadow-xl hover:shadow-orange-500/20 hover:-translate-y-1 transition-all duration-300">
+        <button className="self-start rounded-[10px] bg-primary px-8 py-3 text-[15px] font-bold text-black transition-all hover:opacity-90 shadow-lg shadow-orange-500/20 active:scale-95">
           Talk to Our Experts
         </button>
       </div>

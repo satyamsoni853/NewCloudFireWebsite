@@ -15,7 +15,7 @@ const CTABanner = () => {
 
               {/* Description: Segoe UI, 400, 18px, LH 26px */}
               <p className="font-['Segoe_UI',sans-serif] font-normal text-[18px] leading-[26px] text-gray-900/90 max-w-[550px] mb-6">
-                Experience our AI-powered talent matching and transform how you
+                Experience our AI-powered talent matching and transform How you
                 build your tech team.
               </p>
 

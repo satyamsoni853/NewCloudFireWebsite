@@ -7,17 +7,13 @@ const About = () => {
         <h2 className="font-serif text-[48px] font-bold text-[#111] mb-2 leading-tight">About US</h2>
         <p className="font-sans text-[18px] font-normal text-[#5f5f5f] leading-6 mb-10">Your Satisfaction, Our Mission</p>
         
-        <div className="space-y-7">
-          <p className="font-sans text-[18px] leading-[28px] font-normal text-[#333]">
-            Virasat Solutions a leading and skilled LMS, eLearning & eCommerce application Development Company. We, at Virasat Solutions, have dedicated and passionate teams to cater to each and every aspect of your eLearning & eCommerce business.
+        <div className="space-y-6">
+          <p className="font-sans text-[18px] sm:text-[20px] leading-relaxed font-normal text-[#333] max-w-[900px] mx-auto">
+            Virasat Solutions is a leading and skilled LMS, eLearning & eCommerce application Development Company. We have dedicated and passionate teams to cater to each and every aspect of your business.
           </p>
           
-          <p className="font-sans text-[18px] leading-[28px] font-normal text-[#333]">
-            Whether be it LMS <span className="text-[#ff7301] font-semibold">(Learning Management System)</span> design and development, e-Commerce web and mobile applications development, Moodle development, PHP Frameworks & CMS development, etc. We will assist you on all the areas.
-          </p>
-          
-          <p className="font-sans text-[18px] leading-[28px] font-normal text-[#333]">
-            And we also offer the best maintenance and support solutions according to the client’s requirements Like Custom Theme Development, Plugin Development, Migration, Integration, and Customization Services.
+          <p className="font-sans text-[18px] sm:text-[20px] leading-relaxed font-normal text-[#333] max-w-[900px] mx-auto">
+            Whether be it LMS design/development, e-Commerce applications, Moodle development, or CMS Development, we will assist you in all areas across the board.
           </p>
         </div>
       </div>

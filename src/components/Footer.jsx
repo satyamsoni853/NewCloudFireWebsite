@@ -8,11 +8,11 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-20">
           
           {/* Logo Section (Order 1 for all) */}
-          <div className="flex flex-col items-center lg:items-start lg:w-[248px] order-1">
+          <div className="flex flex-col items-center lg:w-[248px] order-1">
              <img src="/Assests/Cloudfire.png" className="w-[180px] sm:w-[220px] lg:w-[174px] h-auto object-contain mb-8 lg:mb-4" alt="Cloudfire" />
              
              {/* Desktop-only Address and Socials (Hidden on Mobile) */}
-             <div className="hidden lg:flex flex-col gap-8">
+             <div className="hidden lg:flex flex-col items-center gap-8">
                <div className="w-[248px] h-[116px] bg-linear-to-b from-[#ffaf38] to-[#ff7e06] rounded-[20px] flex flex-col items-center justify-center p-4 shadow-md">
                  <img src="/Assests/address.png" className="w-8 h-8 mb-2" alt="address" />
                  <span className="font-['Segoe_UI',sans-serif] font-semibold text-[15px] leading-[18px] text-gray-900 text-center">
@@ -20,7 +20,7 @@ const Footer = () => {
                     Gurugram, Haryana 122103
                  </span>
                </div>
-               <div className="flex gap-6 justify-start">
+               <div className="flex gap-6 justify-center">
                  {[
                    { name: 'fb', icon: 'fb.png' },
                    { name: 'insta', icon: 'insta.png' },
@@ -30,8 +30,7 @@ const Footer = () => {
                    <a href="#" key={social.name} className="hover:scale-110 transition-transform">
                      <img 
                        src={`/Assests/${social.icon}`} 
-                       className="w-[24px] h-[24px] opacity-90 transition-all" 
-                       style={{ filter: "invert(64%) sepia(85%) saturate(3025%) hue-rotate(345deg) brightness(101%) contrast(97%)" }} 
+                       className="w-[24px] h-[24px] transition-all filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100" 
                        alt={social.name} 
                      />
                    </a>
@@ -99,8 +98,7 @@ const Footer = () => {
                  <a href="#" key={social.name} className="hover:scale-110 transition-transform">
                    <img 
                      src={`/Assests/${social.icon}`} 
-                     className="w-[28px] h-[28px]" 
-                     style={{ filter: "invert(64%) sepia(85%) saturate(3025%) hue-rotate(345deg) brightness(101%) contrast(97%)" }} 
+                     className="w-[28px] h-[28px] grayscale" 
                      alt={social.name} 
                    />
                  </a>

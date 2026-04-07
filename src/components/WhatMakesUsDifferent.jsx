@@ -50,14 +50,14 @@ const WhatMakesUsDifferent = () => {
                     ${(index + 1) % 2 !== 0 ? 'md:border-r md:border-white/20 lg:border-r-0' : ''}
                   `}
                 >
-                  <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-xl bg-white shadow-xl">
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-xl shadow-black/10">
                     <img
                       src="/services/icon.png"
                       alt="CloudFire Icon"
                       className="h-10 w-10 object-contain"
                     />
                   </div>
-                  <h3 className="text-[17px] font-bold text-white tracking-wide">{item}</h3>
+                  <h3 className="text-[20px] font-serif font-bold text-white tracking-wide">{item}</h3>
                 </div>
               );
             })}

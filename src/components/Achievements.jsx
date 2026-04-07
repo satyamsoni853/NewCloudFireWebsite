@@ -39,18 +39,18 @@ const Achievements = () => {
           Unknow
         </p>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {achievements.map((item, index) => (
             <div
               key={index}
-              className="achievement-card"
+              className="achievement-card flex flex-col items-center justify-center bg-white rounded-[15px] border border-gray-50 shadow-[0_12px_40px_rgba(0,0,0,0.04)] aspect-3/2 hover:shadow-xl hover:-translate-y-1 transition-all p-6"
             >
-              <div className="h-12 w-12 shrink-0">
+              <div className="mb-4 h-12 w-12 shrink-0">
                 <img src={item.icon} alt={item.label} className="h-full w-full object-contain" />
               </div>
-              <div className="text-left">
-                <h3 className="text-2xl font-bold text-primary">{item.number}</h3>
-                <p className="text-[13px] font-medium text-gray-500 uppercase tracking-tight">{item.label}</p>
+              <div className="text-center">
+                <h3 className="text-[32px] font-bold text-primary leading-tight mb-1">{item.number}</h3>
+                <p className="text-[12px] font-sans font-bold text-gray-500 uppercase tracking-widest">{item.label}</p>
               </div>
             </div>
           ))}

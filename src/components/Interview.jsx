@@ -5,7 +5,7 @@ const Interview = () => {
     <section className="py-12 sm:py-24 bg-white text-center">
       <div className="max-w-[1270px] mx-auto px-6">
         {/* Main Heading */}
-        <h2 className="font-serif text-[32px] sm:text-[48px] md:text-[64px] font-bold text-gray-900 mb-6 leading-tight max-w-4xl mx-auto">
+        <h2 className="font-serif text-[32px] md:text-[48px] font-bold text-gray-900 mb-6 leading-tight max-w-4xl mx-auto">
           Experience The Future Of Interviews
         </h2>
         
@@ -15,10 +15,10 @@ const Interview = () => {
         </p>
         
         {/* The Main "2-Box" Container Card */}
-        <div className="bg-white rounded-[40px] p-4 sm:p-[31px] shadow-[0_30px_100px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col lg:flex-row gap-8 lg:gap-0 w-full max-w-[1280px] h-auto lg:h-[709px] mx-auto overflow-hidden text-left">
+        <div className="bg-white rounded-[40px] p-4 sm:p-[31px] shadow-[0_30px_100px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col lg:flex-row gap-8 lg:gap-0 w-full max-w-[1280px] h-auto lg:h-[709px] mx-auto overflow-hidden text-left relative before:absolute before:inset-0 before:rounded-[40px] before:border-t-2 before:border-t-white before:pointer-events-none">
           
           {/* Left Column (Orange Box) */}
-          <div className="w-full lg:w-[566px] h-auto lg:h-[647px] bg-[#f7941d] p-8 sm:p-10 lg:p-14 rounded-[30px] lg:rounded-none text-white flex flex-col justify-center shrink-0">
+          <div className="w-full lg:w-[566px] h-auto lg:h-[647px] bg-primary p-8 sm:p-10 lg:p-14 rounded-[30px] lg:rounded-none text-white flex flex-col justify-center shrink-0">
             <h3 className="font-serif text-[28px] sm:text-[32px] font-bold mb-8 lg:mb-12 leading-tight">
               Book Your Free AI Interview Today
             </h3>
@@ -86,11 +86,11 @@ const Interview = () => {
               </div>
               
               <div className="pt-4 sm:pt-6">
-                <button type="submit" className="w-full bg-[#f7941d] text-white py-4 sm:py-5 rounded-xl font-sans font-bold text-base sm:text-[17px] hover:shadow-2xl hover:shadow-[#f7941d]/30 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+                <button type="submit" className="w-full bg-primary text-black py-4 sm:py-5 rounded-xl font-sans font-bold text-base sm:text-[17px] hover:shadow-2xl hover:shadow-primary/30 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
                   Schedule My Free AI Interview <span className="text-[10px]">▶</span>
                 </button>
                 <p className="text-[12px] text-center mt-6 text-gray-400 font-medium">
-                  By submitting, you agree to our <span className="text-[#f7941d] font-bold underline cursor-pointer">Privacy Policy</span>
+                  By submitting, you agree to our <span className="text-primary font-bold underline cursor-pointer">Privacy Policy</span>
                 </p>
               </div>
             </form>

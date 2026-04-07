@@ -16,16 +16,13 @@ function AboutPage() {
     <main className="overflow-x-hidden">
       <AboutHero />
       <AboutMission />
-      <About />
       <Achievements />
       <ProjectCTA />
       <Team />
       <Testimonials />
       <Clients />
-      <Network />
     </main>
   );
 }
 
 export default AboutPage;
-

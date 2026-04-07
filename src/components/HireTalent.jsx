@@ -48,32 +48,32 @@ const HireTalent = () => {
               ></div>
               <button 
                 onClick={() => setActiveTab('hire')}
-                className={`relative px-8 py-3 rounded-full text-[12px] sm:text-sm font-black tracking-wider uppercase transition-colors z-10 w-[140px] sm:w-[160px] ${
-                  activeTab === 'hire' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-800'
+                className={`relative px-4 py-3 rounded-full text-[12px] sm:text-sm font-black tracking-wider uppercase transition-colors z-10 w-fit min-w-[140px] sm:min-w-[170px] flex items-center justify-center whitespace-nowrap ${
+                  activeTab === 'hire' ? 'text-black' : 'text-gray-500 hover:text-gray-800'
                 }`}
               >
                 HIRE TALENT
               </button>
               <button 
                 onClick={() => setActiveTab('share')}
-                className={`relative px-8 py-3 rounded-full text-[12px] sm:text-sm font-black tracking-wider uppercase transition-colors z-10 w-[140px] sm:w-[160px] ${
-                  activeTab === 'share' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-800'
+                className={`relative px-4 py-3 rounded-full text-[12px] sm:text-sm font-black tracking-wider uppercase transition-colors z-10 w-fit min-w-[140px] sm:min-w-[170px] flex items-center justify-center whitespace-nowrap ${
+                  activeTab === 'share' ? 'text-black' : 'text-gray-500 hover:text-gray-800'
                 }`}
               >
                 SHARE TALENT
               </button>
             </div>
 
-            <h2 className="text-[40px] sm:text-6xl md:text-7xl font-serif font-bold text-gray-900 leading-[1.1] mb-8 transition-opacity duration-300">
+            <h2 className="text-[48px] font-serif font-bold text-gray-900 leading-[1.1] mb-8 transition-opacity duration-300">
               {currentContent.heading}
             </h2>
             
             {/* Desktop-only description & button (Hidden on Mobile) */}
             <div className="hidden md:block">
-              <p className="text-lg text-gray-600 leading-relaxed mb-12 max-w-lg font-medium transition-opacity duration-300">
+              <p className="text-[18px] text-[#5f5f5f] leading-relaxed mb-12 max-w-lg font-medium transition-opacity duration-300">
                 {currentContent.description}
               </p>
-              <button className="bg-[#ff7301] text-white px-12 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-transform hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-orange-500/20">
+              <button className="bg-primary text-black px-12 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-transform hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-orange-500/20">
                 {currentContent.buttonText}
               </button>
             </div>
@@ -92,10 +92,10 @@ const HireTalent = () => {
 
           {/* Mobile-only description & button (Order 3 on Mobile, Hidden on Desktop) */}
           <div className="md:hidden order-3 flex flex-col items-center text-center">
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-10 max-w-lg font-medium transition-opacity duration-300 px-4">
+            <p className="text-[18px] text-[#5f5f5f] leading-relaxed mb-10 max-w-lg font-medium transition-opacity duration-300 px-4">
               {currentContent.description}
             </p>
-            <button className="bg-[#ff7301] text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg shadow-orange-500/20 active:scale-95 transition-all">
+            <button className="bg-primary text-black px-10 py-4 rounded-xl font-bold text-lg shadow-lg shadow-orange-500/20 active:scale-95 transition-all">
               {currentContent.buttonText}
             </button>
           </div>

@@ -112,7 +112,7 @@ const ContactFormSection = () => {
             <div className="w-full flex justify-center pt-8">
               <button 
                 type="submit" 
-                className="bg-black text-white font-semibold rounded-full flex items-center justify-center gap-4 hover:opacity-90 transition-all w-full md:w-[564px] h-[50px] md:h-[56px]"
+                className="bg-primary text-black font-semibold rounded-full flex items-center justify-center gap-4 hover:opacity-90 transition-all w-full md:w-[564px] h-[50px] md:h-[56px]"
                 style={{ 
                   maxWidth: '100%'
                 }}

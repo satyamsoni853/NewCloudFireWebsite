@@ -84,15 +84,15 @@ const Industries = () => {
                   <div
                     className={`flex items-center gap-[15px] sm:gap-[20px] px-6 lg:px-8 py-3 lg:py-0 rounded-[15px] cursor-pointer transition-all duration-300 border-2 shrink-0 h-[70px] lg:h-[82px] shadow-sm ${
                       isActive
-                        ? "bg-white border-[#ff7301] shadow-[0_10px_30px_rgba(255,115,1,0.1)]"
-                        : "bg-[#f8f8f8] border-transparent hover:bg-white hover:border-gray-200"
+                        ? "bg-white border-primary shadow-[0_10px_30px_rgba(255,115,1,0.1)]"
+                        : "bg-[#fafafa] border-transparent hover:bg-white hover:border-gray-200"
                     }`}
                     onClick={() => setActiveIndustry(ind.name)}
                   >
                     <div
                       className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[14px] shrink-0 transition-all ${
                         isActive
-                          ? "bg-[#ff7301] text-white shadow-lg shadow-orange-500/30"
+                          ? "bg-primary text-black shadow-lg shadow-orange-500/30"
                           : "bg-white text-gray-400"
                       }`}
                     >
@@ -107,7 +107,7 @@ const Industries = () => {
                         {ind.name}
                       </span>
                       {isActive && (
-                        <span className="text-[#ff7301] text-xs ml-2">▶</span>
+                        <span className="text-primary text-xs ml-2">▶</span>
                       )}
                     </div>
                   </div>
@@ -150,7 +150,7 @@ const Industries = () => {
                           .map((sol, sIdx) => (
                             <div
                               key={sIdx}
-                              className="bg-[#f5f5f5] p-5 rounded-xl border border-gray-100"
+                              className="bg-[#fbfbfb] p-5 rounded-xl border border-gray-100"
                             >
                               <h4 className="font-serif font-bold text-gray-900 text-[15px] mb-2">
                                 {sol.title}
@@ -164,7 +164,7 @@ const Industries = () => {
                                     key={i}
                                     className="bg-white px-2 py-1 rounded-full text-[10px] text-gray-700 border border-gray-50 flex items-center gap-1.5"
                                   >
-                                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff7301]"></span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                                     40% Faster
                                   </div>
                                 ))}
@@ -173,7 +173,7 @@ const Industries = () => {
                           ))}
                       </div>
 
-                      <button className="w-full mt-6 bg-[#f7941d] text-white py-4 rounded-xl font-sans font-bold text-[15px] shadow-lg flex items-center justify-center gap-3">
+                      <button className="w-full mt-6 bg-primary text-black py-4 rounded-xl font-sans font-bold text-[15px] shadow-lg flex items-center justify-center gap-3">
                         Explore {ind.name}{" "}
                         <span className="text-[10px]">▶</span>
                       </button>
@@ -224,7 +224,7 @@ const Industries = () => {
                     .map((sol, idx) => (
                       <div
                         key={idx}
-                        className="w-full lg:max-w-[799px] h-auto lg:min-h-[133px] mx-auto bg-[#f5f5f5] p-6 lg:p-5 rounded-2xl border border-gray-100/50 flex flex-col justify-center gap-4 group transition-all"
+                        className="w-full lg:max-w-[799px] h-auto lg:min-h-[133px] mx-auto bg-[#fbfbfb] p-6 lg:p-5 rounded-2xl border border-gray-100/50 flex flex-col justify-center gap-4 group transition-all"
                       >
                         <div className="space-y-2">
                           <h4 className="font-serif font-bold text-gray-900 text-lg lg:text-[16px] leading-tight text-center sm:text-left">
@@ -241,7 +241,7 @@ const Industries = () => {
                               key={i}
                               className="bg-white px-3 py-1 lg:py-2 rounded-full text-[12px] sm:text-[14px] sm:leading-[21px] font-['Segoe_UI',sans-serif] font-normal text-gray-700 shadow-sm border border-gray-50 flex items-center gap-2 whitespace-nowrap"
                             >
-                              <span className="w-2 h-2 rounded-full bg-[#ff7301] shadow-[0_0_8px_rgba(255,115,1,0.4)]"></span>
+                              <span className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(255,115,1,0.4)]"></span>
                               40% Faster Development
                             </div>
                           ))}
@@ -253,7 +253,7 @@ const Industries = () => {
             </div>
 
             <div className="px-1 lg:px-4 pb-2 mt-10 lg:mt-8">
-              <button className="w-full bg-[#f7941d] text-white py-4 sm:py-5 rounded-xl font-sans font-bold text-base sm:text-[18px] shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-1 transition-all active:scale-[0.98] flex items-center justify-center gap-4">
+              <button className="w-full bg-primary text-black py-4 sm:py-5 rounded-xl font-sans font-bold text-base sm:text-[18px] shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-1 transition-all active:scale-[0.98] flex items-center justify-center gap-4">
                 Explore {currentInd.name} Solutions{" "}
                 <span className="text-[10px]">▶</span>
               </button>

@@ -33,21 +33,21 @@ const ServiceFeatures = () => {
  
            <div className="mt-12 grid grid-cols-1 gap-x-16 md:grid-cols-2 gap-y-6 md:gap-y-10">
              {features.map((feature, index) => (
-               <div key={index} className="flex items-center gap-5 md:h-[90px]">
-                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#f1ede7] bg-white shadow-[0_8px_20px_rgba(17,17,17,0.08)]">
-                   <img
-                     src={feature.icon}
-                     alt="CloudFire Icon"
-                     className="h-5 w-5 object-contain"
-                   />
-                 </div>
-                 <p 
-                    className="text-[#333333] text-[18px] md:text-[20px]"
-                    style={{ fontFamily: '"Segoe UI", sans-serif', fontWeight: 400, lineHeight: '1.4' }}
-                 >
-                   {feature.text}
-                 </p>
-               </div>
+                <div key={index} className="flex flex-row items-center gap-6 min-h-[90px]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#f1ede7] bg-white shadow-[0_8px_20px_rgba(17,17,17,0.08)] transform hover:scale-110 transition-transform">
+                    <img
+                      src={feature.icon}
+                      alt="CloudFire Icon"
+                      className="h-6 w-6 object-contain"
+                    />
+                  </div>
+                  <p 
+                     className="text-gray-700 text-[18px] md:text-[21px] leading-snug"
+                     style={{ fontFamily: '"Segoe UI", sans-serif', fontWeight: 500 }}
+                  >
+                    {feature.text}
+                  </p>
+                </div>
              ))}
            </div>
         </div>
