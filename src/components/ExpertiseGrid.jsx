@@ -101,10 +101,10 @@ const ExpertiseGrid = () => {
           {expertiseItems.map((item) => (
             <div 
               key={item.id} 
-              className="flex flex-col items-center group"
+              className="flex flex-col items-center group w-full"
             >
               {/* Illustration and Layout */}
-              <div className="flex justify-center mb-[-60px] relative " style={{ width: '362px', height: '318px' }}>
+              <div className="flex justify-center mb-[-60px] relative w-full h-auto max-w-[362px] aspect-362/318">
                 <img 
                   src={item.image} 
                   alt={item.title} 
@@ -114,30 +114,27 @@ const ExpertiseGrid = () => {
  
                {/* Bottom Content Box */}
               <div 
-                className="rounded-[12px] px-8 pb-8 pt-20 text-left shadow-lg flex z-10 flex-col justify-start"
+                className="rounded-[12px] px-8 pb-8 pt-20 text-left shadow-lg flex z-10 flex-col justify-start w-full md:w-[338px] min-h-[197px]"
                 style={{ 
-                  width: '338.34px', 
-                  minHeight: '197px',
-                  background: 'linear-gradient(0deg, #ED862D 0%, #FBB040 100%)'
+                  background: 'linear-gradient(0deg, #ED862D 0%, #FBB040 100%)',
+                  maxWidth: '100%'
                 }}
               >
                 <h3 
-                  className="text-[#141414] mb-3 leading-tight"
+                  className="text-[#141414] mb-3 leading-tight text-[22px]"
                   style={{ 
                     fontFamily: 'Georgia, serif', 
                     fontWeight: 700, 
-                    fontSize: '22px', 
                     maxWidth: '280px'
                   }}
                 >
                   {item.title}
                 </h3>
                 <p 
-                  className="text-[#141414]/90"
+                  className="text-[#141414]/90 text-[14px]"
                   style={{ 
                     fontFamily: '"Segoe UI", sans-serif', 
                     fontWeight: 400, 
-                    fontSize: '14px', 
                     lineHeight: '1.6',
                     maxWidth: '289.12px'
                   }}

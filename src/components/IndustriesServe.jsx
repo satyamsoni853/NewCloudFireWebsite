@@ -43,30 +43,30 @@ const IndustriesServe = () => {
   return (
     <section className="bg-white py-20 md:py-28 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1400px]">
-        <div className="mb-20">
+        <div className="mb-12 md:mb-16 lg:mb-20">
           <h2 
-            className="text-[#141414]"
-            style={{ fontFamily: 'Georgia, serif', fontWeight: 700, fontSize: '48px', lineHeight: '54px' }}
+            className="text-[#141414] text-[32px] md:text-[48px] font-bold"
+            style={{ fontFamily: 'Georgia, serif', lineHeight: '1.2' }}
           >
             Industries We Serve
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
+        <div className="flex flex-wrap justify-center gap-10 md:gap-12 lg:gap-16">
           {industryCards.map((card) => (
             <div 
               key={card.id} 
-              className="group rounded-[20px] p-8 md:p-10 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden flex flex-col items-center justify-center bg-[#E6EDFF]"
-              style={{ width: '401.49px', height: '490.24px', maxWidth: '100%' }}
+              className="group rounded-[20px] p-8 md:p-10 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden flex flex-col items-center justify-center bg-[#E6EDFF] w-full md:w-[401px] h-auto min-h-[450px] lg:h-[490px]"
+              style={{ maxWidth: '100%' }}
             >
               <img 
-                src="/Industries/BG1.png" 
+                src="/Industries/BG3.png" 
                 alt="" 
-                className="absolute inset-0 w-full h-full object-cover opacity-[0.2] transition-opacity group-hover:opacity-[0.3]"
+                className="absolute inset-0 w-full h-full object-cover  "
               />
               
               <div className="relative z-10 w-full flex flex-col items-center">
-                <div className="flex justify-center mb-8" style={{ width: '308px', height: '270px' }}>
+                <div className="flex justify-center mb-8 w-full max-w-[308px] aspect-308/270">
                   <img 
                     src={card.image} 
                     alt={card.title} 
@@ -74,14 +74,14 @@ const IndustriesServe = () => {
                   />
                 </div>
                 <h3 
-                  className="text-[#141414] mb-3"
-                  style={{ fontFamily: 'Georgia, serif', fontWeight: 400, fontSize: '28px' }}
+                  className="text-[#141414] mb-3 text-[24px] md:text-[28px]"
+                  style={{ fontFamily: 'Georgia, serif', fontWeight: 400 }}
                 >
                   {card.title}
                 </h3>
                 <p 
-                  className="text-[#141414]/70 max-w-[280px]"
-                  style={{ fontFamily: '"Segoe UI", sans-serif', fontWeight: 400, fontSize: '15px', lineHeight: '22px' }}
+                  className="text-[#141414]/70 max-w-[280px] text-[14px] md:text-[15px]"
+                  style={{ fontFamily: '"Segoe UI", sans-serif', fontWeight: 400, lineHeight: '22px' }}
                 >
                   {card.desc}
                 </p>

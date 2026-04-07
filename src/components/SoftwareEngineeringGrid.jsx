@@ -42,8 +42,8 @@ const SoftwareEngineeringGrid = () => {
 
       <div className="mx-auto w-full max-w-[1340px] px-6 md:px-14">
         <h2 
-            className="text-[#141414] text-center mb-16 md:mb-20"
-            style={{ fontFamily: 'Georgia, serif', fontWeight: 700, fontSize: '48px', lineHeight: '1.2' }}
+            className="text-[#141414] text-center mb-12 md:mb-16 lg:mb-20 text-[32px] md:text-[48px] font-bold"
+            style={{ fontFamily: 'Georgia, serif', lineHeight: '1.2' }}
         >
           Software Engineering <br className="hidden md:block" /> Services We Offer
         </h2>

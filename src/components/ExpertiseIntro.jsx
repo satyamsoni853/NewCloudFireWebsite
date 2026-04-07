@@ -10,22 +10,21 @@ const ExpertiseIntro = () => {
                     <img 
                         src="/Expertise/Group 1321314690.png" 
                         alt="Experts Advice Composition" 
-                        style={{ width: '578px', height: '703px', objectFit: 'contain' }}
-                        className="max-w-full drop-shadow-xl"
+                        className="w-full max-w-[578px] aspect-578/703 object-contain drop-shadow-xl"
                     />
                 </div>
 
                 {/* Right side: Text content */}
                 <div className="max-w-2xl">
                     <span 
-                      className="block text-primary mb-4 uppercase"
-                      style={{ fontFamily: '"Segoe UI", sans-serif', fontWeight: 700, fontSize: '18px', lineHeight: '28px' }}
+                      className="block text-primary mb-4 uppercase text-[16px] md:text-[18px] font-bold"
+                      style={{ fontFamily: '"Segoe UI", sans-serif', lineHeight: '28px' }}
                     >
                         EXPERIENCE
                     </span>
                     <h2 
-                      className="text-[#141414] mb-8"
-                      style={{ fontFamily: 'Georgia, serif', fontWeight: 700, fontSize: '48px', lineHeight: '54px' }}
+                      className="text-[#141414] mb-8 text-[32px] md:text-[48px] font-bold"
+                      style={{ fontFamily: 'Georgia, serif', lineHeight: '1.2' }}
                     >
                         Advice From <br className="hidden md:block" /> Our Experts
                     </h2>

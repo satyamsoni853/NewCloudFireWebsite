@@ -26,43 +26,45 @@ const Testimonials = () => {
           Our Testimonials
         </h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="mx-auto flex h-full w-full max-w-[409.91px] flex-col justify-between rounded-sm border border-gray-100 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-xl sm:p-8"
-            >
-              <div className="mb-4 overflow-hidden">
-                <div className="mb-4">
-                  <svg width="40" height="28" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.3 42L24.3 0H12L3 42H15.3ZM42.3 42L51.3 0H39L30 42H42.3Z" fill="#F7941D" />
-                  </svg>
+        <div className="ticker-mask relative overflow-hidden pt-4">
+          <div className="animate-ticker flex w-max gap-6 hover:pause-hover lg:gap-10" style={{ animationDuration: '40s' }}>
+            {[...testimonials, ...testimonials, ...testimonials].map((t, i) => (
+              <div
+                key={i}
+                className="flex h-full w-[350px] shrink-0 flex-col justify-between rounded-sm border border-gray-100 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-xl sm:w-[409.91px] sm:p-8"
+              >
+                <div className="mb-4 overflow-hidden">
+                  <div className="mb-4">
+                    <svg width="40" height="28" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.3 42L24.3 0H12L3 42H15.3ZM42.3 42L51.3 0H39L30 42H42.3Z" fill="#F7941D" />
+                    </svg>
+                  </div>
+
+                  <p className="font-['Segoe_UI'] text-base leading-relaxed text-[#333] sm:text-[17px]">
+                    {t.text}
+                  </p>
                 </div>
 
-                <p className="font-['Segoe_UI'] text-base leading-relaxed text-[#333] sm:text-[17px]">
-                  {t.text}
-                </p>
-              </div>
+                <div className="shrink-0">
+                  <div className="mb-4 h-[1px] w-full bg-gray-200"></div>
 
-              <div className="shrink-0">
-                <div className="mb-4 h-[1px] w-full bg-gray-200"></div>
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="font-[Georgia] text-base font-bold text-[#222] sm:text-[17px]">
+                      {t.author}
+                    </span>
 
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-[Georgia] text-base font-bold text-[#222] sm:text-[17px]">
-                    {t.author}
-                  </span>
-
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, idx) => (
-                      <svg key={idx} width="16" height="16" viewBox="0 0 24 24" fill={idx < t.rating ? '#FFD700' : '#E0E0E0'}>
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, idx) => (
+                        <svg key={idx} width="16" height="16" viewBox="0 0 24 24" fill={idx < t.rating ? '#FFD700' : '#E0E0E0'}>
+                          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

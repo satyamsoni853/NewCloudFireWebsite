@@ -20,24 +20,26 @@ const ContactFormSection = () => {
       </div>
 
       <div className="mx-auto px-6 max-w-[1200px]">
-        <div className="text-center mb-16">
-          <h2 style={{ fontFamily: 'Georgia, serif', fontWeight: 700, fontSize: '48px', lineHeight: '1.2' }} className="text-[#141414] max-w-[800px] mx-auto">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 
+            className="text-[#141414] max-w-[800px] mx-auto text-[32px] md:text-[48px] font-bold"
+            style={{ fontFamily: 'Georgia, serif', lineHeight: '1.2' }}
+          >
             Ready To Start New Project? <br /> Send Us An Enquiry
           </h2>
         </div>
 
         <div 
-          className="mx-auto rounded-[12px] p-10 md:p-16 lg:p-20 shadow-2xl flex flex-col items-center"
+          className="mx-auto rounded-[12px] p-6 sm:p-10 md:p-16 lg:p-20 shadow-2xl flex flex-col items-center"
           style={{ 
             background: 'linear-gradient(180deg, #FBB040 0%, #F6821F 100%)',
             maxWidth: '708px',
-            minHeight: '953px'
           }}
         >
           <form 
             action="https://api.web3forms.com/submit" 
             method="POST"
-            className="w-full space-y-8 flex flex-col items-center"
+            className="w-full space-y-6 md:space-y-8 flex flex-col items-center"
           >
             {/* Web3Forms Access Key */}
             <input type="hidden" name="access_key" value="f5e9b95b-ceb0-42ce-a6ce-b9511c7f96e6" />
@@ -107,16 +109,11 @@ const ContactFormSection = () => {
                 className="w-full bg-[#fbb040]/30 border border-[#fbb040]/50 rounded-[8px] px-4 py-3 text-[#141414] placeholder-[#141414]/40 focus:outline-none focus:ring-1 focus:ring-[#141414]/30 transition-all resize-none"
               ></textarea>
             </div>
-
-          
-
-            <div className="w-full flex justify-center pt-2">
+            <div className="w-full flex justify-center pt-8">
               <button 
                 type="submit" 
-                className="bg-black text-white font-semibold rounded-full flex items-center justify-center gap-4 hover:opacity-90 transition-all"
+                className="bg-black text-white font-semibold rounded-full flex items-center justify-center gap-4 hover:opacity-90 transition-all w-full md:w-[564px] h-[50px] md:h-[56px]"
                 style={{ 
-                  width: '564px',
-                  height: '40px',
                   maxWidth: '100%'
                 }}
               >

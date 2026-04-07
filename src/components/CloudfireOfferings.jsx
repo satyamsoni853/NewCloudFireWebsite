@@ -47,8 +47,8 @@ const CloudfireOfferings = () => {
 
       <div className="mx-auto w-full max-w-[1340px] px-6 md:px-14">
         <h2 
-            className="text-[#141414] text-center mb-16"
-            style={{ fontFamily: 'Georgia, serif', fontWeight: 700, fontSize: '48px', lineHeight: '1.2' }}
+            className="text-[#141414] text-center mb-12 md:mb-16 text-[32px] md:text-[48px] font-bold"
+            style={{ fontFamily: 'Georgia, serif', lineHeight: '1.2' }}
         >
           Services Offline By <br className="hidden md:block" /> Cloudfire
         </h2>

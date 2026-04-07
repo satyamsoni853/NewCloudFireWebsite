@@ -8,6 +8,8 @@ import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
 import IndustriesPage from './pages/IndustriesPage';
 import ExpertisePage from './pages/ExpertisePage';
+import TeamMemberPage from './pages/TeamMemberPage';
+
 import { useEffect } from 'react';
 
 // ScrollToTop component to reset scroll position on route change
@@ -33,6 +35,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/expertise" element={<ExpertisePage />} />
+          <Route path="/team/:slug" element={<TeamMemberPage />} />
         </Routes>
 
         <Footer />

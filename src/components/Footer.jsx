@@ -16,8 +16,8 @@ const Footer = () => {
                <div className="w-[248px] h-[116px] bg-linear-to-b from-[#ffaf38] to-[#ff7e06] rounded-[20px] flex flex-col items-center justify-center p-4 shadow-md">
                  <img src="/Assests/address.png" className="w-8 h-8 mb-2" alt="address" />
                  <span className="font-['Segoe_UI',sans-serif] font-semibold text-[15px] leading-[18px] text-gray-900 text-center">
-                   Plot No.33, (225), Sohna,<br />
-                   Gurugram, Haryana 122103
+                                      Plot No.33, (225), Sohna, <br />
+                    Gurugram, Haryana 122103
                  </span>
                </div>
                <div className="flex gap-6 justify-start">
@@ -46,16 +46,16 @@ const Footer = () => {
               <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">E-Commerce</h4>
               <ul className="space-y-3 lg:space-y-1">
                 {['Big-Commerce', 'Magento', 'OScommerce', 'Prestashop', 'Shopify', 'Ubercart', 'Wpcommerce', 'Opencart', 'Woocommerce'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer">{link}</li>
+                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
                 ))}
               </ul>
             </div>
             <div>
               <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">Company</h4>
               <ul className="space-y-3 lg:space-y-1">
-                <li className="font-['Segoe_UI',sans-serif] font-bold text-[#ff7301] text-[14px] lg:text-[15px] cursor-pointer">Home</li>
+                <li className="font-['Segoe_UI',sans-serif] font-bold text-primary text-[14px] lg:text-[15px] cursor-pointer">Home</li>
                 {['Our Tools', 'Services', 'Skills Network', 'Industries', 'AI Talent', 'Case Studies', 'Resources'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer">{link}</li>
+                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
                 ))}
               </ul>
             </div>
@@ -63,7 +63,7 @@ const Footer = () => {
               <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">Services</h4>
               <ul className="space-y-3 lg:space-y-1">
                 {['E-Learning', 'E-Commerce', 'Framework', 'CMS', 'Virtual Classroom'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer">{link}</li>
+                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
                 ))}
               </ul>
             </div>
@@ -71,7 +71,7 @@ const Footer = () => {
               <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">E-Learning</h4>
               <ul className="space-y-3 lg:space-y-1">
                 {['Moodle', 'Joomoodle', 'WPLMS', 'Mahara', 'Learndash', 'Learnpress', 'Totara', 'Opigno'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-[#ff7301] transition-colors cursor-pointer">{link}</li>
+                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
                 ))}
               </ul>
             </div>
@@ -83,8 +83,8 @@ const Footer = () => {
                <div className="flex flex-col items-center">
                  <img src="/Assests/address.png" className="w-10 h-10 mb-4" alt="address" />
                  <span className="font-['Segoe_UI',sans-serif] font-bold text-[18px] leading-tight text-gray-900 text-center">
-                   Plot No.33, (225), Sohna,<br />
-                   Gurugram, Haryana 122103
+                                      Plot No.33, (225), Sohna, <br />
+                    Gurugram, Haryana 122103
                  </span>
                </div>
             </div>
@@ -113,10 +113,10 @@ const Footer = () => {
         <div className="mt-20 pt-8 border-t border-gray-200">
            <div className="flex flex-col items-center gap-8">
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 font-['Segoe_UI',sans-serif] text-[13px] font-bold text-gray-500 uppercase tracking-wide">
-                <span className="hover:text-[#ff7301] cursor-pointer">Contact Us</span>
-                <span className="hover:text-[#ff7301] cursor-pointer">Request a Demo</span>
-                <span className="hover:text-[#ff7301] cursor-pointer">Privacy Policy</span>
-                <span className="hover:text-[#ff7301] cursor-pointer">Terms of Service</span>
+                <span className="hover:text-primary cursor-pointer">Contact Us</span>
+                <span className="hover:text-primary cursor-pointer">Request a Demo</span>
+                <span className="hover:text-primary cursor-pointer">Privacy Policy</span>
+                <span className="hover:text-primary cursor-pointer">Terms of Service</span>
               </div>
               <p className="font-['Segoe_UI',sans-serif] font-normal text-[12px] text-gray-400">
                 © 2026 CloudFire IT Services. &nbsp;All rights reserved.
