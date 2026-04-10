@@ -1,20 +1,23 @@
 import React from 'react';
 import Hero from '../components/ServiceHero';
-import ServiceFeatures from '../components/ServiceFeatures';
-import CloudfireOfferings from '../components/CloudfireOfferings';
-import SoftwareEngineeringGrid from '../components/SoftwareEngineeringGrid';
-import WhatMakesUsDifferent from '../components/WhatMakesUsDifferent';
+import WebTechnologies from '../components/WebTechnologies';
+import CMSBuilders from '../components/CMSBuilders';
+import AISection from '../components/AISection';
+import AdditionalServices from '../components/AdditionalServices';
+import ResourceAugmentation from '../components/ResourceAugmentation';
 
 function ServicePage() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
-      <ServiceFeatures />
-      <CloudfireOfferings />
-      <SoftwareEngineeringGrid />
-      <WhatMakesUsDifferent />
+      <WebTechnologies />
+      <CMSBuilders />
+      <AISection />
+      <AdditionalServices />
+      <ResourceAugmentation />
     </main>
   );
 }
 
 export default ServicePage;
+

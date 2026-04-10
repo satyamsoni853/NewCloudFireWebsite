@@ -1,125 +1,137 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#f6f6f6] border-t border-gray-200 flex flex-col items-center text-center">
-      <div className="w-full max-w-[1440px] px-6 lg:px-[80px] py-12 lg:py-[60px] pb-10">
+    <footer className="w-full bg-[#f8f8f8] pt-16 lg:pt-24 pb-10 px-6 lg:px-[80px]">
+      <div className="max-w-[1440px] mx-auto">
         
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-20">
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
-          {/* Logo Section (Order 1 for all) */}
-          <div className="flex flex-col items-center lg:w-[248px] order-1">
-             <img src="/Assests/Cloudfire.png" className="w-[180px] sm:w-[220px] lg:w-[174px] h-auto object-contain mb-8 lg:mb-4" alt="Cloudfire" />
-             
-             {/* Desktop-only Address and Socials (Hidden on Mobile) */}
-             <div className="hidden lg:flex flex-col items-center gap-8">
-               <div className="w-[248px] h-[116px] bg-linear-to-b from-[#ffaf38] to-[#ff7e06] rounded-[20px] flex flex-col items-center justify-center p-4 shadow-md">
-                 <img src="/Assests/address.png" className="w-8 h-8 mb-2" alt="address" />
-                 <span className="font-['Segoe_UI',sans-serif] font-semibold text-[15px] leading-[18px] text-gray-900 text-center">
-                                      Plot No.33, (225), Sohna, <br />
-                    Gurugram, Haryana 122103
-                 </span>
-               </div>
-               <div className="flex gap-6 justify-center">
-                 {[
-                   { name: 'fb', icon: 'fb.png' },
-                   { name: 'insta', icon: 'insta.png' },
-                   { name: 'yt', icon: 'youtube.png' },
-                   { name: 'in', icon: 'linkedin.png' }
-                 ].map((social) => (
-                   <a href="#" key={social.name} className="hover:scale-110 transition-transform">
-                     <img 
-                       src={`/Assests/${social.icon}`} 
-                       className="w-[24px] h-[24px] transition-all filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100" 
-                       alt={social.name} 
-                     />
-                   </a>
-                 ))}
-               </div>
-             </div>
-          </div>
-
-          {/* Links Grid (Order 2 on Mobile) */}
-          <div className="order-2 grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 flex-1 text-left">
-            <div>
-              <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">E-Commerce</h4>
-              <ul className="space-y-3 lg:space-y-1">
-                {['Big-Commerce', 'Magento', 'OScommerce', 'Prestashop', 'Shopify', 'Ubercart', 'Wpcommerce', 'Opencart', 'Woocommerce'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">Company</h4>
-              <ul className="space-y-3 lg:space-y-1">
-                <li className="font-['Segoe_UI',sans-serif] font-bold text-primary text-[14px] lg:text-[15px] cursor-pointer">Home</li>
-                {['Our Tools', 'Services', 'Skills Network', 'Industries', 'AI Talent', 'Case Studies', 'Resources'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">Services</h4>
-              <ul className="space-y-3 lg:space-y-1">
-                {['E-Learning', 'E-Commerce', 'Framework', 'CMS', 'Virtual Classroom'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-gray-900 font-serif font-bold text-[18px] lg:text-[16px] mb-6">E-Learning</h4>
-              <ul className="space-y-3 lg:space-y-1">
-                {['Moodle', 'Joomoodle', 'WPLMS', 'Mahara', 'Learndash', 'Learnpress', 'Totara', 'Opigno'].map(link => (
-                  <li key={link} className="font-['Segoe_UI',sans-serif] font-normal text-[14px] lg:text-[15px] text-gray-600 hover:text-primary transition-colors cursor-pointer">{link}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Mobile-only Address and Socials (Order 3 & 4) */}
-          <div className="lg:hidden order-3 flex flex-col items-center gap-10">
-            <div className="w-full max-w-[320px] bg-linear-to-b from-[#ffaf38] to-[#ff7e06] rounded-[15px] p-8 shadow-xl shadow-orange-500/20">
-               <div className="flex flex-col items-center">
-                 <img src="/Assests/address.png" className="w-10 h-10 mb-4" alt="address" />
-                 <span className="font-['Segoe_UI',sans-serif] font-bold text-[18px] leading-tight text-gray-900 text-center">
-                                      Plot No.33, (225), Sohna, <br />
-                    Gurugram, Haryana 122103
-                 </span>
-               </div>
-            </div>
+          {/* Column 1: Logo & Address */}
+          <div className="flex flex-col items-center lg:items-start">
+            <img src="/Assests/Cloudfire.png" className="w-[180px] lg:w-[174px] h-auto object-contain mb-8" alt="Cloudfire" />
             
-            <div className="flex gap-8 justify-center">
-               {[
-                 { name: 'fb', icon: 'fb.png' },
-                 { name: 'insta', icon: 'insta.png' },
-                 { name: 'yt', icon: 'youtube.png' },
-                 { name: 'in', icon: 'linkedin.png' }
-               ].map((social) => (
-                 <a href="#" key={social.name} className="hover:scale-110 transition-transform">
-                   <img 
-                     src={`/Assests/${social.icon}`} 
-                     className="w-[28px] h-[28px] grayscale" 
-                     alt={social.name} 
-                   />
-                 </a>
-               ))}
+            <div className="w-full max-w-[280px] bg-linear-to-b from-[#ffaf38] to-[#ff7e06] rounded-[20px] flex flex-col items-center justify-center p-6 shadow-md">
+              <img src="/Assests/address.png" className="w-10 h-10 mb-3" alt="address" />
+              <span className="font-['Segoe_UI',sans-serif] font-bold text-[16px] leading-[22px] text-gray-900 text-center">
+                Plot No.33, (225), Sohna, <br />
+                Gurugram, Haryana 122103
+              </span>
             </div>
+          </div>
+
+          {/* Column 2: Company */}
+          <div>
+            <h3 className="text-[#141414] font-serif font-bold text-[22px] mb-8">Company</h3>
+            <ul className="space-y-4">
+              <li className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] hover:text-[#ff7e06] cursor-pointer transition-colors">Home</li>
+              <li className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] hover:text-[#ff7e06] cursor-pointer transition-colors">About</li>
+              <li className="font-['Segoe_UI',sans-serif] text-[16px] text-[#ff7e06] font-semibold cursor-pointer">Services</li>
+              <li className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] hover:text-[#ff7e06] cursor-pointer transition-colors">Industries</li>
+              <li className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] hover:text-[#ff7e06] cursor-pointer transition-colors">Our Expertise</li>
+              <li className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] hover:text-[#ff7e06] cursor-pointer transition-colors">Client Success</li>
+              <li className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] hover:text-[#ff7e06] cursor-pointer transition-colors">Discover Cloudfire</li>
+            </ul>
+          </div>
+
+          {/* Column 3: Follow Us On */}
+          <div className="lg:pl-4">
+            <h3 className="text-[#141414] font-serif font-bold text-[22px] mb-8">Follow Us On</h3>
+            <ul className="space-y-5">
+              {[
+                { name: 'Facebook', icon: 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' },
+                { name: 'Instagram', icon: 'rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/' },
+                { name: 'Youtube', icon: 'path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/' },
+                { name: 'linkedin', icon: 'path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/' },
+                { name: 'Twitter', icon: 'path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768"/' }
+              ].map((social) => (
+                <li key={social.name} className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
+                  <div className="w-[28px] h-[28px] text-[#ff7e06]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-full h-full"
+                    >
+                      {social.name === 'Instagram' ? (
+                        <>
+                          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </>
+                      ) : social.name === 'Youtube' ? (
+                        <>
+                          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/>
+                          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+                        </>
+                      ) : social.name === 'linkedin' ? (
+                        <>
+                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                          <rect width="4" height="12" x="2" y="9"/>
+                          <circle cx="4" cy="4" r="2"/>
+                        </>
+                      ) : social.name === 'Twitter' ? (
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768" />
+                      ) : (
+                        <path d={social.icon} />
+                      )}
+                    </svg>
+                  </div>
+                  <span className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] group-hover:text-[#ff7e06] transition-colors">{social.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Get In Touch */}
+          <div>
+            <h3 className="text-[#141414] font-serif font-bold text-[22px] mb-8">Get In Touch</h3>
+            <form className="flex flex-col gap-4">
+              <input 
+                type="text" 
+                placeholder="Name" 
+                className="w-full h-[48px] px-5 bg-white border border-[#eee] rounded-[10px] text-[15px] focus:outline-none focus:border-[#ff7e06] transition-all"
+              />
+              <input 
+                type="email" 
+                placeholder="email@gmail.com" 
+                className="w-full h-[48px] px-5 bg-white border border-[#eee] rounded-[10px] text-[15px] focus:outline-none focus:border-[#ff7e06] transition-all"
+              />
+              <input 
+                type="tel" 
+                placeholder="+0 123 456 789" 
+                className="w-full h-[48px] px-5 bg-white border border-[#eee] rounded-[10px] text-[15px] focus:outline-none focus:border-[#ff7e06] transition-all"
+              />
+              <button 
+                type="submit" 
+                className="w-full h-[52px] mt-2 bg-black text-white rounded-[10px] flex items-center justify-center gap-3 font-semibold text-[16px] hover:bg-[#1a1a1a] transition-all shadow-lg"
+              >
+                Submit Now
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
 
-        {/* Sub-footer Section */}
-        <div className="mt-20 pt-8 border-t border-gray-200">
-           <div className="flex flex-col items-center gap-8">
-              <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 font-['Segoe_UI',sans-serif] text-[13px] font-bold text-gray-500 uppercase tracking-wide">
-                <span className="hover:text-primary cursor-pointer">Contact Us</span>
-                <span className="hover:text-primary cursor-pointer">Request a Demo</span>
-                <span className="hover:text-primary cursor-pointer">Privacy Policy</span>
-                <span className="hover:text-primary cursor-pointer">Terms of Service</span>
-              </div>
-              <p className="font-['Segoe_UI',sans-serif] font-normal text-[12px] text-gray-400">
-                © 2026 CloudFire IT Services. &nbsp;All rights reserved.
-              </p>
-           </div>
+        {/* Bottom Bar */}
+        <div className="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="font-['Segoe_UI',sans-serif] text-[14px] text-gray-500">
+            © 2026 CloudFire IT Services, All rights reserved.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 font-['Segoe_UI',sans-serif] text-[14px] text-gray-600">
+            <span className="hover:text-[#ff7e06] cursor-pointer transition-colors">Contact Us</span>
+            <span className="hover:text-[#ff7e06] cursor-pointer transition-colors">Request a Demo</span>
+            <span className="hover:text-[#ff7e06] cursor-pointer transition-colors">Privacy Policy</span>
+            <span className="hover:text-[#ff7e06] cursor-pointer transition-colors">Terms of Service</span>
+          </div>
         </div>
       </div>
     </footer>
@@ -127,3 +139,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
