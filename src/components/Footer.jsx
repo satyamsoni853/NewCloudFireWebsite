@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="max-w-[1440px] mx-auto">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-8">
           
           {/* Column 1: Logo & Address */}
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="col-span-2 md:col-span-1 flex flex-col items-center lg:items-start">
             <img src="/Assests/Cloudfire.png" className="w-[180px] lg:w-[174px] h-auto object-contain mb-8" alt="Cloudfire" />
             
             <div className="w-full max-w-[280px] bg-linear-to-b from-[#ffaf38] to-[#ff7e06] rounded-[20px] flex flex-col items-center justify-center p-6 shadow-md">
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
 
           {/* Column 4: Get In Touch */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="text-[#141414] font-serif font-bold text-[22px] mb-8">Get In Touch</h3>
             <form className="flex flex-col gap-4">
               <input 
