@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-[1440px] mx-auto">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-16 xl:gap-x-24">
           
           {/* Column 1: Logo & Address */}
           <div className="col-span-2 md:col-span-1 flex flex-col items-center lg:items-start">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Follow Us On */}
-          <div className="lg:pl-4">
+          <div className="">
             <h3 className="text-[#141414] font-serif font-bold text-[22px] mb-8">Follow Us On</h3>
             <ul className="space-y-5">
               {[
@@ -45,47 +45,56 @@ const Footer = () => {
                 { name: 'Instagram', icon: 'rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/' },
                 { name: 'Youtube', icon: 'path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/' },
                 { name: 'linkedin', icon: 'path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/' },
-                { name: 'Twitter', icon: 'path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768"/' }
-              ].map((social) => (
-                <li key={social.name} className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
-                  <div className="w-[28px] h-[28px] text-[#ff7e06]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-full h-full"
-                    >
-                      {social.name === 'Instagram' ? (
-                        <>
-                          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                        </>
-                      ) : social.name === 'Youtube' ? (
-                        <>
-                          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/>
-                          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
-                        </>
-                      ) : social.name === 'linkedin' ? (
-                        <>
-                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                          <rect width="4" height="12" x="2" y="9"/>
-                          <circle cx="4" cy="4" r="2"/>
-                        </>
-                      ) : social.name === 'Twitter' ? (
-                        <path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768" />
-                      ) : (
-                        <path d={social.icon} />
-                      )}
-                    </svg>
-                  </div>
-                  <span className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] group-hover:text-[#ff7e06] transition-colors">{social.name}</span>
-                </li>
-              ))}
+                { name: 'Twitter', icon: 'path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768"/' },
+                { name: 'Dashboard', icon: 'M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z', path: '/dashboard' }
+              ].map((item) => {
+                const Content = (
+                  <li key={item.name} className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
+                    <div className="w-[28px] h-[28px] text-[#ff7e06]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-full h-full"
+                      >
+                        {item.name === 'Instagram' ? (
+                          <>
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                          </>
+                        ) : item.name === 'Youtube' ? (
+                          <>
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/>
+                            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+                          </>
+                        ) : item.name === 'linkedin' ? (
+                          <>
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                          </>
+                        ) : item.name === 'Twitter' ? (
+                          <path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768" />
+                        ) : (
+                          <path d={item.icon} />
+                        )}
+                      </svg>
+                    </div>
+                    <span className="font-['Segoe_UI',sans-serif] text-[16px] text-[#555] group-hover:text-[#ff7e06] transition-colors">{item.name}</span>
+                  </li>
+                );
+
+                return item.path ? (
+                  <Link to={item.path} key={item.name}>{Content}</Link>
+                ) : (
+                  Content
+                );
+              })}
             </ul>
           </div>
 

@@ -37,7 +37,7 @@ const ResourceAugmentation = () => {
           {resourceData.map((item, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-[25px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#eee] flex flex-col md:flex-row p-6 items-center gap-8 hover:shadow-lg transition-all w-full lg:w-[576px] lg:h-[276px]"
+              className="bg-white rounded-[25px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-[#f0f0f0] flex flex-col md:flex-row p-6 items-center gap-8 hover:shadow-[0_30px_70px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 w-full lg:w-[576px] lg:h-[276px]"
             >
               <div className="w-full md:w-[240px] h-[200px] md:h-full rounded-[20px] overflow-hidden shrink-0">
                 <img 

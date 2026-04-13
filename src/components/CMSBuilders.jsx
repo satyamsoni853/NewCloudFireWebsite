@@ -43,14 +43,16 @@ const CMSBuilders = () => {
                 />
               </div>
               <h3 className="text-[#141414] font-serif font-bold text-[23px] leading-[30px] mb-5">{item.title}</h3>
-              <ul className="space-y-2 w-full text-center">
-                {item.list.map((li, i) => (
-                  <li key={i} className="text-[#555] font-['Segoe_UI',sans-serif] font-normal text-[15px] leading-[22px] flex justify-center items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-[#ff7e06]" />
-                    {li}
-                  </li>
-                ))}
-              </ul>
+              <div className="w-full flex justify-center px-4">
+                <ul className="space-y-3 inline-block">
+                  {item.list.map((li, i) => (
+                    <li key={i} className="text-[#555] font-['Segoe_UI',sans-serif] font-normal text-[16px] leading-[22px] flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff7e06] flex-shrink-0" />
+                      {li}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>

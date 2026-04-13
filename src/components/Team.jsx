@@ -76,8 +76,8 @@ const Team = () => {
                   />
                 </div>
 
-                <div className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border-2 border-primary bg-white text-primary shadow-lg transition-transform group-hover:scale-110 active:scale-95 sm:h-12 sm:w-12">
-                  <span className="text-xl font-bold sm:text-2xl">+</span>
+                <div className="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-full border-[3.5px] border-primary bg-white text-primary shadow-xl transition-all group-hover:scale-110 active:scale-95 sm:bottom-4 sm:right-4 sm:h-14 sm:w-14">
+                  <span className="text-2xl font-bold sm:text-3xl">+</span>
                 </div>
               </div>
 

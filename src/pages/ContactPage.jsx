@@ -11,10 +11,10 @@ const ContactPage = () => {
     <div className="page pt-20">
       <ContactHero />
       <ContactCards />
-      <ProjectCTA />
       <ContactFormSection />
       <ContactMap />
-           <Clients />
+      <Clients />
+      <ProjectCTA />
     </div>
   );
 };

@@ -9,6 +9,8 @@ import ContactPage from './pages/ContactPage';
 import IndustriesPage from './pages/IndustriesPage';
 import ExpertisePage from './pages/ExpertisePage';
 import TeamMemberPage from './pages/TeamMemberPage';
+import HireTalentDashboard from './pages/HireTalentDashboard';
+
 
 import { useEffect } from 'react';
 
@@ -24,23 +26,33 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
-        <ScrollToTop />
-        <Header />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/expertise" element={<ExpertisePage />} />
-          <Route path="/team/:slug" element={<TeamMemberPage />} />
-        </Routes>
-
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const isDashboard = location.pathname.startsWith('/dashboard');
+
+  return (
+    <div className="min-h-screen bg-white">
+      <ScrollToTop />
+      {!isDashboard && <Header />}
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/expertise" element={<ExpertisePage />} />
+        <Route path="/team/:slug" element={<TeamMemberPage />} />
+        <Route path="/dashboard" element={<HireTalentDashboard />} />
+      </Routes>
+
+      {!isDashboard && <Footer />}
+    </div>
   );
 }
 

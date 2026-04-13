@@ -17,10 +17,10 @@ function AboutPage() {
       <AboutHero />
       <AboutMission />
       <Achievements />
-      <ProjectCTA />
       <Team />
       <Testimonials />
       <Clients />
+      <ProjectCTA />
     </main>
   );
 }
