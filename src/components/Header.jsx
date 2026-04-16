@@ -5,6 +5,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { pathname } = useLocation();
 
+  React.useEffect(() => {
+    const handleToggle = () => setIsMenuOpen(prev => !prev);
+    window.addEventListener('toggleMobileMenu', handleToggle);
+    return () => window.removeEventListener('toggleMobileMenu', handleToggle);
+  }, []);
+
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
@@ -18,7 +24,11 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed md:absolute top-0 md:top-5 left-0 md:left-1/2 md:-translate-x-1/2 w-full md:w-[calc(100%-40px)] md:max-w-[1340px] h-20 bg-[#292929] md:bg-white md:rounded-2xl shadow-xl flex items-center justify-between px-6 md:px-10 z-1000 transition-all duration-300">
+      <header className={`fixed rounded-xl md:absolute top-0 md:top-5 left-0 md:left-1/2 md:-translate-x-1/2 w-full md:w-[calc(100%-40px)] md:max-w-[1340px] h-20 flex items-center justify-between px-6 md:px-10 z-[1000] transition-all duration-300 ${
+        pathname === '/' 
+          ? 'hidden md:flex bg-white shadow-xl' 
+          : 'flex bg-[#292929] md:bg-white shadow-xl'
+      }`}>
         
         {/* Logo Section */}
         <Link to="/" className="flex flex-col items-start translate-z-0">

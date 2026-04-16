@@ -99,7 +99,7 @@ const HireTalentDashboard = () => {
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10 py-2 sm:py-3">
           {/* Badge */}
           <div className="mb-2">
-            <div className="w-[167.14px] h-[50px] bg-[#fbb03b] text-white flex items-center justify-center rounded-full text-sm font-bold shadow-md uppercase tracking-wider">
+            <div className="w-[167.14px] h-[50px] bg-[#fbb03b] text-black flex items-center justify-center rounded-full text-sm font-bold shadow-md uppercase tracking-wider">
               HIRE TALENT
             </div>
           </div>
@@ -112,7 +112,7 @@ const HireTalentDashboard = () => {
             Get Immediate Access To Skilled Developers Ready To Join Your Team
           </p>
 
-          <button className="w-[172.21px] h-[40px] bg-[#ff7301] text-white rounded-lg font-bold shadow-lg hover:bg-orange-600 transition-all mb-4 flex items-center justify-center shrink-0">
+          <button className="w-[172.21px] h-[40px] bg-[#ff7301] text-black rounded-lg font-bold shadow-lg hover:bg-orange-600 transition-all mb-8 flex items-center justify-center shrink-0">
             Get Talent Now
           </button>
 
@@ -145,7 +145,7 @@ const HireTalentDashboard = () => {
               <h3 className="font-serif font-bold text-[27px] mb-4 flex items-center after:content-[''] after:flex-grow after:h-[1px] after:bg-gray-100 after:ml-6">
                 Profile
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                 <input 
                   type="text" 
                   placeholder="First Name" 
@@ -181,7 +181,7 @@ const HireTalentDashboard = () => {
               <h3 className="font-serif font-bold text-[27px] mb-4 flex items-center after:content-[''] after:flex-grow after:h-[1px] after:bg-gray-100 after:ml-6">
                 Company Profile
               </h3>
-              <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-4">
                 {[
                   "Company Name", "Job Title", "Technology", "Experience", "Duration", 
                   "Company Description", "Company Website", "Industry", "Address", "Total Employees",
@@ -225,7 +225,7 @@ const HireTalentDashboard = () => {
 
               <button 
                 type="submit" 
-                className="w-full sm:w-[200px] h-[55px] bg-[#ff7301] text-white rounded-lg font-bold shadow-xl shadow-orange-500/20 hover:bg-orange-600 transition-all text-lg mt-1"
+                className="w-full sm:w-[200px] h-[55px] bg-[#ff7301] text-white rounded-lg font-bold shadow-xl shadow-orange-500/20 hover:bg-orange-600 transition-all text-lg mt-8"
               >
                 Update
               </button>
