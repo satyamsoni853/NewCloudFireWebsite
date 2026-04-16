@@ -10,6 +10,8 @@ import IndustriesPage from './pages/IndustriesPage';
 import ExpertisePage from './pages/ExpertisePage';
 import TeamMemberPage from './pages/TeamMemberPage';
 import HireTalentDashboard from './pages/HireTalentDashboard';
+import JobsPage from './pages/JobsPage';
+import ReportsPage from './pages/ReportsPage';
 
 
 import { useEffect } from 'react';
@@ -49,6 +51,8 @@ function AppContent() {
         <Route path="/expertise" element={<ExpertisePage />} />
         <Route path="/team/:slug" element={<TeamMemberPage />} />
         <Route path="/dashboard" element={<HireTalentDashboard />} />
+        <Route path="/dashboard/jobs" element={<JobsPage />} />
+        <Route path="/dashboard/reports" element={<ReportsPage />} />
       </Routes>
 
       {!isDashboard && <Footer />}
